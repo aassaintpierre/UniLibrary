@@ -5,14 +5,14 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<WebApplication_LibraryManagementProject.Models.ELibraryDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<WebApplication_LibraryManagementProject.Models.UNILibraryDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(WebApplication_LibraryManagementProject.Models.ELibraryDbContext context)
+        protected override void Seed(WebApplication_LibraryManagementProject.Models.UNILibraryDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

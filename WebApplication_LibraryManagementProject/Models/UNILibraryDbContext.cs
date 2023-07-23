@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WebApplication_LibraryManagementProject.Models
 {
-    public class ELibraryDbContext : DbContext
+    public class UNILibraryDbContext : DbContext
     {
         public DbSet<Member> Members { get; set; }
         public DbSet<Book> Books { get; set; }

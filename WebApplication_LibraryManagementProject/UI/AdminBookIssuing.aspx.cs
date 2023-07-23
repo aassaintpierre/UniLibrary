@@ -10,7 +10,7 @@ namespace WebApplication_LibraryManagementProject.UI
 {
     public partial class WebForm8 : System.Web.UI.Page
     {
-        private ELibraryDbContext db = new ELibraryDbContext();
+        private UNILibraryDbContext db = new UNILibraryDbContext();
         protected void Page_Load(object sender, EventArgs e)
         {
             GridViewDataBind();

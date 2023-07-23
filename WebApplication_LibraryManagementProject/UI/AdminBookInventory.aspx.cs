@@ -12,7 +12,7 @@ namespace WebApplication_LibraryManagementProject.UI
 {
     public partial class AdminBookInventory : System.Web.UI.Page
     {
-        private ELibraryDbContext db = new ELibraryDbContext();
+        private UNILibraryDbContext db = new UNILibraryDbContext();
         private static string gImagePath;
         private static int gActualStock, gCurrentStock, gIssuedBooks;
         protected void Page_Load(object sender, EventArgs e)
