@@ -1748,9 +1748,9 @@
     <Content Include="UI\Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202306211810570_secondMigrations3.cs" />
-    <Compile Include="Migrations\202306211810570_secondMigrations3.designer.cs">
-      <DependentUpon>202306211810570_secondMigrations3.cs</DependentUpon>
+    <Compile Include="Migrations\202307260310084_initialMigration1.cs" />
+    <Compile Include="Migrations\202307260310084_initialMigration1.designer.cs">
+      <DependentUpon>202307260310084_initialMigration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminLogin.cs" />
@@ -1920,8 +1920,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202306211810570_secondMigrations3.resx">
-      <DependentUpon>202306211810570_secondMigrations3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307260310084_initialMigration1.resx">
+      <DependentUpon>202307260310084_initialMigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
