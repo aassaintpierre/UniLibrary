@@ -46,7 +46,6 @@
                     </div>
                 </div>
                 
-                <a href="Homepage.aspx"><< Back to Home</a><br /><br />
             </div>
         </div>
     </div>

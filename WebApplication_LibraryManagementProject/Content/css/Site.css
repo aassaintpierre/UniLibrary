@@ -13,29 +13,65 @@
     text-decoration: none !important;
 }
 
-.bannertext {
-    margin-top: 80px;
-    font-weight: 600;
-    font-size: 60px;
-    transition: 1s;
+
+
+.card {
+    border: 1px solid #ccc;
+    width: 900px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #b380ff, #d9b3ff);
+    border-radius: 100px;
 }
-.bannertext:hover {
-    color: #f0bc5e;
-    font-weight: 600;
-    font-size: 60px;
+
+.header img {
+    height: 400px;
+    width: 500px;
+
 }
-.homebanner {
-    background: #cbfadb;
-    padding: 30px;
+
+.header .logo-label {
+    display: block;
+    font-weight: bold;
+    font-size: 35px;
 }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column {
+    cursor: pointer;
+    flex: 2;
+    padding: 40px;
+    /*border: 5px solid #ccc;*/
+}
+
+    .column img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .column label {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+        font-size: 30px;
+        color: black;
+    }
+
 @media screen and (max-width: 770px) {
     .homebanner {
         background: white;
     }
     .bannertext {
         margin-top: 0;
-    }
-    .bannertext2 {
-        display: none;
     }
 }
