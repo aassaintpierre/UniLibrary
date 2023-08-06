@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 using WebApplication_LibraryManagementProject.Models;
 
 namespace WebApplication_LibraryManagementProject.UI
@@ -20,16 +16,12 @@ namespace WebApplication_LibraryManagementProject.UI
         {
             Member member = new Member();
             member.FullName = FullNameTextBox.Text.Trim();
-            member.DateOfBirth = Convert.ToDateTime(DoBTextBox.Text.Trim());
-            member.ContactNo = ContactNumberTextBox.Text.Trim();
-            member.Email = EmailIdTextBox.Text.Trim();
-            member.Country = CountryDropDownList.SelectedItem.Value;
-            member.City = CityTextBox.Text.Trim();
-            member.Pincode = PincodeTextBox.Text.Trim();
-            member.FullAddress = FullAddressTextBox.Text;
+            member.Email = EmailTextBox.Text.Trim();
+            member.Username = User_name.Text.Trim();
+            member.AccountStatus = Status.SelectedItem.Value;
+            member.Access = User_access.SelectedItem.Value;
             member.Id = UserIdTextBox.Text.Trim();
             member.Password = PasswordTextBox.Text.Trim();
-            member.AccountStatus = "pending";
 
             try
             {
@@ -41,7 +33,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     db.Members.Add(member);
                     db.SaveChanges();
-                    Response.Write("<script>alert('Sign Up successful. Login to your account now!')</script>");
+                    Response.Write("<script>alert('User registered successfully.')</script>");
                 }
             }
             catch (Exception)

@@ -27,13 +27,13 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     FullNameTextBox.Text = v.FullName;
                     AccountStatusTextBox.Text = v.AccountStatus;
-                    DoBTextBox.Text = v.DateOfBirth.Date.ToShortDateString();
-                    ContactNoTextBox.Text = v.ContactNo;
+                    /*DoBTextBox.Text = v.DateOfBirth.Date.ToShortDateString();
+                    ContactNoTextBox.Text = v.ContactNo;*/
                     EmailIDTextBox.Text = v.Email;
-                    CountryTextBox.Text = v.Country;
+                    /*CountryTextBox.Text = v.Country;
                     CityTextBox.Text = v.City;
                     PincodeTextBox.Text = v.Pincode;
-                    FullAddressTextBox.Text = v.FullAddress;
+                    FullAddressTextBox.Text = v.FullAddress;*/
                 }
                 else
                 {

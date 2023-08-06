@@ -28,7 +28,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 Session["fullname"] = v.FullName;
                 Session["status"] = v.AccountStatus;
                 Session["role"] = "user";
-                Response.Redirect("HomePage.aspx");
+                Response.Redirect("UserProfile.aspx");
             }
             else
             {
