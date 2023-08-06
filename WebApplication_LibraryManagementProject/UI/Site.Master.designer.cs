@@ -51,15 +51,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.LinkButton UserLoginNavLinkButton;
 
         /// <summary>
-        /// SignUpNavLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton SignUpNavLinkButton;
-
-        /// <summary>
         /// LogoutNavLinkButton control.
         /// </summary>
         /// <remarks>

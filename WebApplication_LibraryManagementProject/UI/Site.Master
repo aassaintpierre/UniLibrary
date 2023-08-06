@@ -25,31 +25,41 @@
     <form id="form1" runat="server">
         <!--NavBar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <a href="#" class="navbar-brand">
-                <img src="../Images/books.png" height="30" />
-                Uni-Library
-            </a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item"><a href="HomePage.aspx" id="Home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="AboutUs.aspx" id="About" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="#" id="Contact" class="nav-link">Terms</a></li>
+                    <a href="HomePage.aspx" class="navbar-brand">
+                        <img src="../Images/LMS2.png" height="50" />
+                        Uni-Library
+                    </a>
                 </ul>
+
                 <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a href="AboutUs.aspx" id="About" class="nav-link">About Us</a>
+
+                    </li>
+
                     <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="ViewBooksNavLinkButton" runat="server" OnClick="ViewBooksNavLinkButton_Click">View Books</asp:LinkButton></li>
+                        <asp:LinkButton class="nav-link" ID="ViewBooksNavLinkButton" runat="server" OnClick="ViewBooksNavLinkButton_Click">View Books</asp:LinkButton>
+
+                    </li>
                     <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="UserLoginNavLinkButton" runat="server" OnClick="UserLoginNavLinkButton_Click">User Login</asp:LinkButton></li>
+                        <asp:LinkButton class="nav-link" ID="UserLoginNavLinkButton" runat="server" OnClick="UserLoginNavLinkButton_Click">Login</asp:LinkButton>
+
+                    </li>
+                    
                     <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="SignUpNavLinkButton" runat="server" OnClick="SignUpNavLinkButton_Click">Sign Up</asp:LinkButton></li>
+                        <asp:LinkButton class="nav-link" ID="LogoutNavLinkButton" runat="server" OnClick="LogoutNavLinkButton_Click">Logout</asp:LinkButton>
+
+                    </li>
                     <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="LogoutNavLinkButton" runat="server" OnClick="LogoutNavLinkButton_Click">Logout</asp:LinkButton></li>
-                    <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="HelloUserNavLinkButton" runat="server" OnClick="HelloUserNavLinkButton_Click">Hello user</asp:LinkButton></li>
+                        <asp:LinkButton class="nav-link" ID="HelloUserNavLinkButton" runat="server" OnClick="HelloUserNavLinkButton_Click">Hello user</asp:LinkButton>
+
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -74,7 +84,7 @@
             </div>
             <div class="row footer2">
                 <div class="col text-center">
-                    &copy;2023 - SAINT PIERRE & BRUNACHE&nbsp;
+                    &copy;2023 - Anika Aga SAINT PIERRE&nbsp;
                 </div>
             </div>
         </footer>

@@ -12,15 +12,15 @@
         <div class="row">
             <div class="col">
                 <h1>Developed by:</h1>
-                <h3>SAINT PIERRE & BRUNACHE</h3>
+                <h3>Anika Aga S. SAINT PIERRE</h3>
             </div>
         </div>
         <address>
-            <a href="#">GitHub</a>
+            <a href="https://github.com/aassaintpierre">GitHub</a>
             <br />
             Université Espoir <br />
         </address>
-        <strong>Support:</strong>   <a href="mailto:mathurinsarah42@gmail.com">mathurinsarah42@gmail.com</a>
+        <strong>Reach out to:</strong>   <a href="mailto:mathurinsarah42@gmail.com">mathurinsarah42@gmail.com</a>
 
 
     </div>
