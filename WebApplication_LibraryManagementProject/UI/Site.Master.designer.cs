@@ -87,24 +87,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.LinkButton AdminLoginFooterLinkButton;
 
         /// <summary>
-        /// AuthorManagementFooterLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton AuthorManagementFooterLinkButton;
-
-        /// <summary>
-        /// PublisherManagementFooterLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton PublisherManagementFooterLinkButton;
-
-        /// <summary>
         /// BookInventoryFooterLinkButton control.
         /// </summary>
         /// <remarks>

@@ -25,7 +25,5 @@ namespace WebApplication_LibraryManagementProject.Models
         public string BookImgLink { get; set; }
         public string AuthorId{ get; set; }
         public string PublisherId { get; set; }
-        public virtual Author Author { get; set; }
-        public virtual Publisher Publisher { get; set; }
     }
 }

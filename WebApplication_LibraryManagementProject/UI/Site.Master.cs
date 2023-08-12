@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebApplication_LibraryManagementProject.UI
 {
@@ -21,12 +16,9 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     ViewBooksNavLinkButton.Visible = true;
                     UserLoginNavLinkButton.Visible = true;
-                    /*SignUpNavLinkButton.Visible = true;*/
                     LogoutNavLinkButton.Visible = false;
                     HelloUserNavLinkButton.Visible = false;
                     AdminLoginFooterLinkButton.Visible = true;
-                    AuthorManagementFooterLinkButton.Visible = false;
-                    PublisherManagementFooterLinkButton.Visible = false;
                     BookInventoryFooterLinkButton.Visible = false;
                     BookIssuingFooterLinkButton.Visible = false;
                     MemberManagementFooterLinkButton.Visible = false;
@@ -35,12 +27,9 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     ViewBooksNavLinkButton.Visible = true;
                     UserLoginNavLinkButton.Visible = false;
-                    /*SignUpNavLinkButton.Visible = false;*/
                     LogoutNavLinkButton.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, " + Session["fullname"];
                     AdminLoginFooterLinkButton.Visible = true;
-                    AuthorManagementFooterLinkButton.Visible = true;
-                    PublisherManagementFooterLinkButton.Visible = true;
                     BookInventoryFooterLinkButton.Visible = true;
                     BookIssuingFooterLinkButton.Visible = true;
                     MemberManagementFooterLinkButton.Visible = true;
@@ -49,12 +38,9 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     ViewBooksNavLinkButton.Visible = true;
                     UserLoginNavLinkButton.Visible = false;
-                    /*SignUpNavLinkButton.Visible = false;*/
                     LogoutNavLinkButton.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, Admin";
                     AdminLoginFooterLinkButton.Visible = false;
-                    AuthorManagementFooterLinkButton.Visible = true;
-                    PublisherManagementFooterLinkButton.Visible = true;
                     BookInventoryFooterLinkButton.Visible = true;
                     BookIssuingFooterLinkButton.Visible = true;
                     MemberManagementFooterLinkButton.Visible = true;
@@ -68,16 +54,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected void AdminLoginFooterLinkButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminLogin.aspx");
-        }
-
-        protected void AuthorManagementFooterLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminAuthorManagement.aspx");
-        }
-
-        protected void PublisherManagementFooterLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminPublisherManagement.aspx");
         }
 
         protected void BookInventoryFooterLinkButton_Click(object sender, EventArgs e)

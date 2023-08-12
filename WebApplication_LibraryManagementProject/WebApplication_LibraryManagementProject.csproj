@@ -1738,8 +1738,6 @@
     <Content Include="UI\UserLogin.aspx" />
     <Content Include="UI\UserSignUp.aspx" />
     <Content Include="UI\UserProfile.aspx" />
-    <Content Include="UI\AdminAuthorManagement.aspx" />
-    <Content Include="UI\AdminPublisherManagement.aspx" />
     <Content Include="UI\AdminBookIssuing.aspx" />
     <Content Include="UI\AdminMemberManagement.aspx" />
     <Content Include="UI\ViewBooks.aspx" />
@@ -1748,18 +1746,16 @@
     <Content Include="UI\Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202307260310084_initialMigration1.cs" />
-    <Compile Include="Migrations\202307260310084_initialMigration1.designer.cs">
-      <DependentUpon>202307260310084_initialMigration1.cs</DependentUpon>
+    <Compile Include="Migrations\202308120118307_initialmigration1.cs" />
+    <Compile Include="Migrations\202308120118307_initialmigration1.designer.cs">
+      <DependentUpon>202308120118307_initialmigration1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminLogin.cs" />
-    <Compile Include="Models\Author.cs" />
     <Compile Include="Models\BookIssue.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\UNILibraryDbContext.cs" />
     <Compile Include="Models\Member.cs" />
-    <Compile Include="Models\Publisher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\AdminBookInventory.aspx.cs">
       <DependentUpon>AdminBookInventory.aspx</DependentUpon>
@@ -1809,20 +1805,6 @@
     </Compile>
     <Compile Include="UI\UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI\AdminAuthorManagement.aspx.cs">
-      <DependentUpon>AdminAuthorManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\AdminAuthorManagement.aspx.designer.cs">
-      <DependentUpon>AdminAuthorManagement.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="UI\AdminPublisherManagement.aspx.cs">
-      <DependentUpon>AdminPublisherManagement.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="UI\AdminPublisherManagement.aspx.designer.cs">
-      <DependentUpon>AdminPublisherManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="UI\AdminBookIssuing.aspx.cs">
       <DependentUpon>AdminBookIssuing.aspx</DependentUpon>
@@ -1920,8 +1902,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202307260310084_initialMigration1.resx">
-      <DependentUpon>202307260310084_initialMigration1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202308120118307_initialmigration1.resx">
+      <DependentUpon>202308120118307_initialmigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

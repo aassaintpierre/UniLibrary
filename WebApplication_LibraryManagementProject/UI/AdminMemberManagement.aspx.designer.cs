@@ -78,24 +78,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.LinkButton DeactiveButton;
 
         /// <summary>
-        /// DoBTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DoBTextBox;
-
-        /// <summary>
-        /// ContactNoTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ContactNoTextBox;
-
-        /// <summary>
         /// EmailIDTextBox control.
         /// </summary>
         /// <remarks>
@@ -105,40 +87,13 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.TextBox EmailIDTextBox;
 
         /// <summary>
-        /// CountryTextBox control.
+        /// AccessTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CountryTextBox;
-
-        /// <summary>
-        /// CityTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CityTextBox;
-
-        /// <summary>
-        /// PincodeTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PincodeTextBox;
-
-        /// <summary>
-        /// FullAddressTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox FullAddressTextBox;
+        protected global::System.Web.UI.WebControls.TextBox AccessTextBox;
 
         /// <summary>
         /// DeleteUserButton control.

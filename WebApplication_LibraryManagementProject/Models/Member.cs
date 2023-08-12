@@ -6,10 +6,15 @@ namespace WebApplication_LibraryManagementProject.Models
     {
         [Key]
         public string Id { get; set; }
+
+        [Required]
         public string FullName { get; set; }
+
+        [Required]
         public string Username { get; set; }
         public string Access { get; set; }
 
+        [Required]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
         

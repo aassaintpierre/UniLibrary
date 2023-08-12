@@ -52,47 +52,21 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-3">
-                                <label for="body_DoBTextBox">Date of Birth</label>
-                                <asp:TextBox class="form-control" placeholder="dd-mm-yyyy" ID="DoBTextBox" runat="server" ReadOnly="True"></asp:TextBox>
-                            </div>
-                            <div class="col-md-4">
-                                <label for="body_ContactNoTextBox">Contact No.</label>
-                                <asp:TextBox class="form-control" placeholder="01xxxxxxxxxx" ID="ContactNoTextBox" runat="server" TextMode="Number" ReadOnly="True"></asp:TextBox>
-                            </div>
+                            
+                            
                             <div class="col-md-5">
                                 <label for="body_EmailIDTextBox">Email ID</label>
                                 <asp:TextBox class="form-control" placeholder="example@mail.com" ID="EmailIDTextBox" runat="server" TextMode="Email" ReadOnly="True"></asp:TextBox>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="body_CountryTextBox">Country</label>
-                                    <asp:TextBox class="form-control" placeholder="Country" ID="CountryTextBox" runat="server" ReadOnly="True"></asp:TextBox>
-                                </div>
+                            <div class="col-md-5">
+                                <label for="body_AccessTextBox">Access</label>
+                                <asp:TextBox class="form-control" placeholder="user" ID="AccessTextBox" runat="server" ReadOnly="True"></asp:TextBox>
                             </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="body_CityTextBox">City</label>
-                                    <asp:TextBox class="form-control" placeholder="City" ID="CityTextBox" runat="server" ReadOnly="True"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="body_PincodeTextBox">Pincode</label>
-                                    <asp:TextBox class="form-control" placeholder="Pincode" ID="PincodeTextBox" runat="server" TextMode="Number" ReadOnly="True"></asp:TextBox>
-                                </div>
-                            </div>
+                            
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <label for="body_FullAddressTextBox">Full Address</label>
-                                    <asp:TextBox class="form-control" placeholder="Full Address" ID="FullAddressTextBox" runat="server" TextMode="MultiLine" ReadOnly="true" Rows="2"></asp:TextBox>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col">
                                 <asp:Button CssClass="btn btn-block btn-danger" ID="DeleteUserButton" runat="server" Text="Delete User Permanently" />
@@ -114,17 +88,14 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <asp:SqlDataSource ID="MemberSqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:ELibraryDbContext %>" SelectCommand="SELECT [Id], [FullName], [DateOfBirth], [ContactNo], [Email], [Country], [City], [AccountStatus] FROM [Members]"></asp:SqlDataSource>
+                                <asp:SqlDataSource ID="MemberSqlDataSource" runat="server" ConnectionString="Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;" SelectCommand="SELECT [Id], [FullName], [Email], [AccountStatus], [Access] FROM [Members]"></asp:SqlDataSource>
                                 <asp:GridView ID="MemberGridView" CssClass="table table-striped table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="MemberSqlDataSource" OnRowDataBound="MemberGridView_RowDataBound">
                                     <Columns>
                                         <asp:BoundField DataField="Id" HeaderText="ID" ReadOnly="True" SortExpression="Id" />
                                         <asp:BoundField DataField="FullName" HeaderText="Full name" SortExpression="FullName" />
-                                        <asp:BoundField DataField="AccountStatus" HeaderText="Account status" SortExpression="AccountStatus" />
-                                        <asp:BoundField DataField="ContactNo" HeaderText="Contact no." SortExpression="ContactNo" />
                                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                                        <asp:BoundField DataField="DateOfBirth" HeaderText="Date of birth" SortExpression="DateOfBirth" />
-                                        <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
-                                        <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                                        <asp:BoundField DataField="AccountStatus" HeaderText="Account status" SortExpression="AccountStatus" />
+                                        <asp:BoundField DataField="Access" HeaderText="Account access" SortExpression="Access" />
                                     </Columns>
                                 </asp:GridView>
                             </div>

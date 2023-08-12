@@ -27,13 +27,8 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     FullNameTextBox.Text = v.FullName;
                     AccountStatusTextBox.Text = v.AccountStatus;
-                    /*DoBTextBox.Text = v.DateOfBirth.Date.ToShortDateString();
-                    ContactNoTextBox.Text = v.ContactNo;*/
+                    AccessTextBox.Text = v.Access;
                     EmailIDTextBox.Text = v.Email;
-                    /*CountryTextBox.Text = v.Country;
-                    CityTextBox.Text = v.City;
-                    PincodeTextBox.Text = v.Pincode;
-                    FullAddressTextBox.Text = v.FullAddress;*/
                 }
                 else
                 {
@@ -80,13 +75,8 @@ namespace WebApplication_LibraryManagementProject.UI
         {
             FullNameTextBox.Text = "";
             AccountStatusTextBox.Text = "";
-            DoBTextBox.Text = "";
-            ContactNoTextBox.Text = "";
             EmailIDTextBox.Text = "";
-            CountryTextBox.Text = "";
-            CityTextBox.Text = "";
-            PincodeTextBox.Text = "";
-            FullAddressTextBox.Text = "";
+            AccessTextBox.Text = "";
         }
 
         protected void MemberGridView_RowDataBound(object sender, GridViewRowEventArgs e)

@@ -30,7 +30,7 @@ namespace WebApplication_LibraryManagementProject.UI
         }
         private void FillDropdownsWithAuthorPublisher()
         {
-            try
+            /*try
             {
                 var auhtors = db.Authors.ToList();
                 var publishers = db.Publishers.ToList();
@@ -47,7 +47,7 @@ namespace WebApplication_LibraryManagementProject.UI
             catch (Exception)
             {
                 Response.Write("<script>alert('Invalid Request')</script>");
-            }
+            }*/
         }
         private Book GetBookInfo(string operation = "add")
         {

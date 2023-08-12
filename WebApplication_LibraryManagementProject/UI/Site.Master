@@ -75,8 +75,6 @@
             <div class="row footer1">
                 <div class="col text-center">
                     <asp:LinkButton class="footerlinks" ID="AdminLoginFooterLinkButton" runat="server" OnClick="AdminLoginFooterLinkButton_Click">Admin Login</asp:LinkButton>
-                    <asp:LinkButton class="footerlinks" ID="AuthorManagementFooterLinkButton" runat="server" OnClick="AuthorManagementFooterLinkButton_Click">Author Management</asp:LinkButton>&nbsp;
-                    <asp:LinkButton class="footerlinks" ID="PublisherManagementFooterLinkButton" runat="server" OnClick="PublisherManagementFooterLinkButton_Click">Publisher Management</asp:LinkButton>&nbsp;
                     <asp:LinkButton class="footerlinks" ID="BookInventoryFooterLinkButton" runat="server" OnClick="BookInventoryFooterLinkButton_Click">Book Inventory</asp:LinkButton>&nbsp;
                     <asp:LinkButton class="footerlinks" ID="BookIssuingFooterLinkButton" runat="server" OnClick="BookIssuingFooterLinkButton_Click">Book Issuing</asp:LinkButton>&nbsp;
                     <asp:LinkButton class="footerlinks" ID="MemberManagementFooterLinkButton" runat="server" OnClick="MemberManagementFooterLinkButton_Click">Member Management</asp:LinkButton>

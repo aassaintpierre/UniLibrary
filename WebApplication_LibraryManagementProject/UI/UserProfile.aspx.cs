@@ -16,28 +16,9 @@ namespace WebApplication_LibraryManagementProject.UI
             if (!IsPostBack)
             {
                 LoadMemberInfo();
-                LoadIssuedBooks();
             }
         }
-        private void LoadIssuedBooks()
-        {
-            try
-            {
-                string userId = Session["username"].ToString();
-                List<BookIssue> bookIssues = db.BookIssues.Where(m => m.MemberId == userId).ToList();
-                List<dynamic> dList = new List<dynamic>();
-                foreach (BookIssue book in bookIssues)
-                {
-                    dList.Add(new { ID = book.BookId, Book = book.Book.Name, Issue = book.IssueDate.ToShortDateString(), Return = book.DueDate.ToShortDateString() });
-                }
-                BooksGridView.DataSource = dList;
-                BooksGridView.DataBind();
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex + "')</script>");
-            }
-        }
+        
         private void LoadMemberInfo()
         {
             try
@@ -60,13 +41,7 @@ namespace WebApplication_LibraryManagementProject.UI
                         AccountStatusLabel.CssClass = "badge badge-pill badge-danger";
                     }
                     FullNameTextBox.Text = v.FullName;
-                    DoBTextBox.Text = v.DateOfBirth.ToShortDateString();
-                    ContactNumberTextBox.Text = v.ContactNo;
                     EmailIdTextBox.Text = v.Email;
-                    CountryDropDownList.SelectedValue = v.Country;
-                    CityTextBox.Text = v.City;
-                    PincodeTextBox.Text = v.Pincode;
-                    FullAddressTextBox.Text = v.FullAddress;
                     UserIdTextBox.Text = v.Id;
                     NewPasswordTextBox.Text = "";
                 }
@@ -90,13 +65,6 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     v.FullName = FullNameTextBox.Text.Trim();
                     Session["fullname"] = v.FullName;
-                    v.DateOfBirth = Convert.ToDateTime(DoBTextBox.Text.Trim());
-                    v.ContactNo = ContactNumberTextBox.Text.Trim();
-                    v.Email = EmailIdTextBox.Text.Trim();
-                    v.Country = CountryDropDownList.SelectedItem.Value;
-                    v.City = CityTextBox.Text.Trim();
-                    v.Pincode = PincodeTextBox.Text.Trim();
-                    v.FullAddress = FullAddressTextBox.Text;
                     string newPass = NewPasswordTextBox.Text.Trim();
                     if (!newPass.Equals(""))
                     {
