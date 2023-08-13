@@ -33,33 +33,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// ViewBooksNavLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ViewBooksNavLinkButton;
-
-        /// <summary>
-        /// UserLoginNavLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UserLoginNavLinkButton;
-
-        /// <summary>
-        /// LogoutNavLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LogoutNavLinkButton;
-
-        /// <summary>
         /// HelloUserNavLinkButton control.
         /// </summary>
         /// <remarks>
@@ -69,6 +42,51 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.LinkButton HelloUserNavLinkButton;
 
         /// <summary>
+        /// ViewBooksLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton ViewBooksLink;
+
+        /// <summary>
+        /// BookIssuingLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton BookIssuingLink;
+
+        /// <summary>
+        /// MemberManagementLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton MemberManagementLink;
+
+        /// <summary>
+        /// UserLoginLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton UserLoginLink;
+
+        /// <summary>
+        /// LogoutLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LogoutLink;
+
+        /// <summary>
         /// body control.
         /// </summary>
         /// <remarks>
@@ -76,41 +94,5 @@ namespace WebApplication_LibraryManagementProject.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder body;
-
-        /// <summary>
-        /// AdminLoginFooterLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton AdminLoginFooterLinkButton;
-
-        /// <summary>
-        /// BookInventoryFooterLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BookInventoryFooterLinkButton;
-
-        /// <summary>
-        /// BookIssuingFooterLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BookIssuingFooterLinkButton;
-
-        /// <summary>
-        /// MemberManagementFooterLinkButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton MemberManagementFooterLinkButton;
     }
 }

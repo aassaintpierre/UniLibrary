@@ -60,22 +60,13 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.DropDownList LanguageDropDownList;
 
         /// <summary>
-        /// PublisherNameDropDownList control.
+        /// AuthorName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PublisherNameDropDownList;
-
-        /// <summary>
-        /// AutherNameDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList AutherNameDropDownList;
+        protected global::System.Web.UI.WebControls.TextBox AuthorName;
 
         /// <summary>
         /// PublishDateTextBox control.
@@ -94,33 +85,6 @@ namespace WebApplication_LibraryManagementProject.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ListBox GenreListBox;
-
-        /// <summary>
-        /// EditionTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EditionTextBox;
-
-        /// <summary>
-        /// BookCostTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BookCostTextBox;
-
-        /// <summary>
-        /// PagesTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PagesTextBox;
 
         /// <summary>
         /// ActualStockTextBox control.
@@ -150,15 +114,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.TextBox IssuedBooksTextBox;
 
         /// <summary>
-        /// BookDescriptionTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox BookDescriptionTextBox;
-
-        /// <summary>
         /// AddBookButton control.
         /// </summary>
         /// <remarks>
@@ -184,14 +139,5 @@ namespace WebApplication_LibraryManagementProject.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button DeleteBookButton;
-
-        /// <summary>
-        /// BooksGridView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView BooksGridView;
     }
 }

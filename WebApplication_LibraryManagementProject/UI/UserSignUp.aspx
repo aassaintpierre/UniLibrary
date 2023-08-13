@@ -52,23 +52,14 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="body_UserIdTextBox">User ID</label>
-                                    <asp:TextBox class="form-control" placeholder="User ID" ID="UserIdTextBox" runat="server"></asp:TextBox>
-                                </div>
-                            </div>
-
-                            
-
-                        </div
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="form-group">
                                     <label for="body_EmailTextBox">Email</label>
                                     <asp:TextBox class="form-control" placeholder="example@mail.com" ID="EmailTextBox" runat="server" TextMode="Email"></asp:TextBox>
                                 </div>
                             </div>
+
+                        </div>
+
+                        <div class="row">
 
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -87,7 +78,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="body_Status">Access level</label>
                                     <asp:DropDownList CssClass="form-control" ID="User_access" runat="server">
@@ -114,10 +105,10 @@
 
                         <div class="row">
 
-                            <div class="col-md-6">
+                           <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="body_UsernameTextBox">Username</label>
-                                    <asp:TextBox class="form-control" placeholder="username" ID="User_name" runat="server"></asp:TextBox>
+                                    <asp:TextBox class="form-control" placeholder="User ID" ID="UsernameTextBox" runat="server"></asp:TextBox>
                                 </div>
                             </div>
 

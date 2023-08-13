@@ -32,14 +32,14 @@ namespace WebApplication_LibraryManagementProject.UI
             var v = db.Books.Where(b => b.Id == id).FirstOrDefault();
             return v != null;
         }
-        private bool CheckIfMemberExists(string id)
+        private bool CheckIfMemberExists(string username)
         {
-            var v = db.Members.Where(b => b.Id == id).FirstOrDefault();
+            var v = db.Members.Where(b => b.Username == username).FirstOrDefault();
             return v != null;
         }
-        private bool CheckIfAccountActive(string id)
+        private bool CheckIfAccountActive(string username)
         {
-            var v = db.Members.Where(b => b.Id == id && b.AccountStatus.Equals("active")).FirstOrDefault();
+            var v = db.Members.Where(b => b.Username == username && b.AccountStatus.Equals("active")).FirstOrDefault();
             return v != null;
         }
         private bool CheckIfIssueEntryExists(string mId, string bId)
@@ -49,7 +49,7 @@ namespace WebApplication_LibraryManagementProject.UI
         }
         private void Clear()
         {
-            MemberIdTextBox.Text = "";
+            UsernameTextBox.Text = "";
             BookIdTextBox.Text = "";
             MemberNameTextBox.Text = "";
             BookNameTextBox.Text = "";
@@ -61,7 +61,7 @@ namespace WebApplication_LibraryManagementProject.UI
         {
             try
             {
-                var member = db.Members.Where(m => m.Id == MemberIdTextBox.Text.Trim()).FirstOrDefault();
+                var member = db.Members.Where(m => m.Username == UsernameTextBox.Text.Trim()).FirstOrDefault();
                 var book = db.Books.Where(b => b.Id == BookIdTextBox.Text.Trim()).FirstOrDefault();
                 if(member != null && book != null)
                 {
@@ -85,7 +85,7 @@ namespace WebApplication_LibraryManagementProject.UI
             try
             {
                 BookIssue bookIssue = new BookIssue();
-                bookIssue.MemberId = MemberIdTextBox.Text.Trim();
+                bookIssue.MemberId = UsernameTextBox.Text.Trim();
                 bookIssue.BookId = BookIdTextBox.Text.Trim();
                 bookIssue.IssueDate = Convert.ToDateTime(StartDateTextBox.Text.Trim());
                 bookIssue.DueDate = Convert.ToDateTime(EndDateTextBox.Text.Trim());
@@ -135,7 +135,7 @@ namespace WebApplication_LibraryManagementProject.UI
         {
             try
             {
-                string mId = MemberIdTextBox.Text.Trim();
+                string mId = UsernameTextBox.Text.Trim();
                 string bId = BookIdTextBox.Text.Trim();
 
                 if (CheckIfBookExists(bId) && CheckIfMemberExists(mId))

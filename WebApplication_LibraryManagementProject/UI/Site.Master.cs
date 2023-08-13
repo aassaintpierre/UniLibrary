@@ -14,36 +14,30 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 if (Session["role"].Equals(""))
                 {
-                    ViewBooksNavLinkButton.Visible = true;
-                    UserLoginNavLinkButton.Visible = true;
-                    LogoutNavLinkButton.Visible = false;
+                    ViewBooksLink.Visible = true;
+                    UserLoginLink.Visible = true;
+                    LogoutLink.Visible = false;
                     HelloUserNavLinkButton.Visible = false;
-                    AdminLoginFooterLinkButton.Visible = true;
-                    BookInventoryFooterLinkButton.Visible = false;
-                    BookIssuingFooterLinkButton.Visible = false;
-                    MemberManagementFooterLinkButton.Visible = false;
+                    BookIssuingLink.Visible = false;
+                    MemberManagementLink.Visible = false;
                 }
                 else if (Session["role"].Equals("user"))
                 {
-                    ViewBooksNavLinkButton.Visible = true;
-                    UserLoginNavLinkButton.Visible = false;
-                    LogoutNavLinkButton.Visible = true;
+                    ViewBooksLink.Visible = true;
+                    UserLoginLink.Visible = false;
+                    LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, " + Session["fullname"];
-                    AdminLoginFooterLinkButton.Visible = true;
-                    BookInventoryFooterLinkButton.Visible = true;
-                    BookIssuingFooterLinkButton.Visible = true;
-                    MemberManagementFooterLinkButton.Visible = true;
+                    BookIssuingLink.Visible = true;
+                    MemberManagementLink.Visible = true;
                 }
                 else if (Session["role"].Equals("admin"))
                 {
-                    ViewBooksNavLinkButton.Visible = true;
-                    UserLoginNavLinkButton.Visible = false;
-                    LogoutNavLinkButton.Visible = true;
+                    ViewBooksLink.Visible = true;
+                    UserLoginLink.Visible = false;
+                    LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, Admin";
-                    AdminLoginFooterLinkButton.Visible = false;
-                    BookInventoryFooterLinkButton.Visible = true;
-                    BookIssuingFooterLinkButton.Visible = true;
-                    MemberManagementFooterLinkButton.Visible = true;
+                    BookIssuingLink.Visible = true;
+                    MemberManagementLink.Visible = true;
                 }
             }
             catch (Exception)
@@ -51,22 +45,13 @@ namespace WebApplication_LibraryManagementProject.UI
             }
         }
 
-        protected void AdminLoginFooterLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminLogin.aspx");
-        }
 
-        protected void BookInventoryFooterLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AdminBookInventory.aspx");
-        }
-
-        protected void BookIssuingFooterLinkButton_Click(object sender, EventArgs e)
+        protected void BookIssuingLinkButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminBookIssuing.aspx");
         }
 
-        protected void MemberManagementFooterLinkButton_Click(object sender, EventArgs e)
+        protected void MemberManagementLinkButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminMemberManagement.aspx");
         }
@@ -103,9 +88,5 @@ namespace WebApplication_LibraryManagementProject.UI
             Response.Redirect("ViewBooks.aspx");
         }
 
-        protected void AddBooksNavLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("AddBook.aspx");
-        }
     }
 }

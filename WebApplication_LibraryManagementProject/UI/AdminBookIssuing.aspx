@@ -38,8 +38,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="body_MemberIdTextBox">Member ID</label>
-                                    <asp:TextBox class="form-control" placeholder="Member ID" ID="MemberIdTextBox" runat="server"></asp:TextBox>
+                                    <label for="body_UsernameTextBox">Username</label>
+                                    <asp:TextBox class="form-control" placeholder="Username" ID="UsernameTextBox" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-6">

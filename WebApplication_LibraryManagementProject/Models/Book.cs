@@ -14,16 +14,16 @@ namespace WebApplication_LibraryManagementProject.Models
         public string Name { get; set; }
         public string Genre { get; set; }
         [DataType(DataType.Date)]
-        public DateTime PublishDate { get; set; }
+       /* public DateTime PublishDate { get; set; }*/
         public string Language { get; set; }
-        public string Edition { get; set; }
+        /*public string Edition { get; set; }
         public double BookCost { get; set; }
         public int NoOfPages { get; set; }
-        public string BookDescription { get; set; }
+        public string BookDescription { get; set; }*/
         public int ActualStock { get; set; }
         public int CurrentStock { get; set; }
         public string BookImgLink { get; set; }
         public string AuthorId{ get; set; }
-        public string PublisherId { get; set; }
+        /*public string PublisherId { get; set; }*/
     }
 }

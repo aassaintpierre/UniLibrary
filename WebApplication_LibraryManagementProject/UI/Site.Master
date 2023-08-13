@@ -33,32 +33,38 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <a href="HomePage.aspx" class="navbar-brand">
-                        <img src="../Images/LMS2.png" height="50" />
+                        <img src="../Images/LMS2.png" height="70" />
                         Uni-Library
                     </a>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="nav-item"><a href="AboutUs.aspx" id="About" class="nav-link">About Us</a>
-
+                    <li class="nav-item">
+                        <asp:LinkButton class="nav-link" ID="HelloUserNavLinkButton" runat="server" OnClick="HelloUserNavLinkButton_Click">Hello user</asp:LinkButton>
                     </li>
 
                     <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="ViewBooksNavLinkButton" runat="server" OnClick="ViewBooksNavLinkButton_Click">View Books</asp:LinkButton>
-
+                        <a href="AboutUs.aspx" id="About" class="nav-link">About Us</a>
                     </li>
-                    <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="UserLoginNavLinkButton" runat="server" OnClick="UserLoginNavLinkButton_Click">Login</asp:LinkButton>
 
+                    <li class="nav-item">
+                        <asp:LinkButton class="nav-link" ID="ViewBooksLink" runat="server" OnClick="ViewBooksNavLinkButton_Click">View Books</asp:LinkButton>
+                    </li>
+
+                    <li class="nav-item">                    
+                    <asp:LinkButton class="footerlinks" ID="BookIssuingLink" runat="server" OnClick="BookIssuingLinkButton_Click">Assign Books</asp:LinkButton>&nbsp;
+                    </li>
+
+                    <li class="nav-item">                    
+                    <asp:LinkButton class="footerlinks" ID="MemberManagementLink" runat="server" OnClick="MemberManagementLinkButton_Click">Member Management</asp:LinkButton>
+                    </li>
+
+                    <li class="nav-item">
+                        <asp:LinkButton class="nav-link" ID="UserLoginLink" runat="server" OnClick="UserLoginNavLinkButton_Click">Login</asp:LinkButton>
                     </li>
                     
                     <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="LogoutNavLinkButton" runat="server" OnClick="LogoutNavLinkButton_Click">Logout</asp:LinkButton>
-
-                    </li>
-                    <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="HelloUserNavLinkButton" runat="server" OnClick="HelloUserNavLinkButton_Click">Hello user</asp:LinkButton>
-
+                        <asp:LinkButton class="nav-link" ID="LogoutLink" runat="server" OnClick="LogoutNavLinkButton_Click">Logout</asp:LinkButton>
                     </li>
                 </ul>
             </div>
@@ -70,22 +76,6 @@
             </asp:ContentPlaceHolder>
         </div>
 
-        <%--Footer--%>
-        <footer class="footer-copyright text-center <%--fixed-bottom--%>">
-            <div class="row footer1">
-                <div class="col text-center">
-                    <asp:LinkButton class="footerlinks" ID="AdminLoginFooterLinkButton" runat="server" OnClick="AdminLoginFooterLinkButton_Click">Admin Login</asp:LinkButton>
-                    <asp:LinkButton class="footerlinks" ID="BookInventoryFooterLinkButton" runat="server" OnClick="BookInventoryFooterLinkButton_Click">Book Inventory</asp:LinkButton>&nbsp;
-                    <asp:LinkButton class="footerlinks" ID="BookIssuingFooterLinkButton" runat="server" OnClick="BookIssuingFooterLinkButton_Click">Book Issuing</asp:LinkButton>&nbsp;
-                    <asp:LinkButton class="footerlinks" ID="MemberManagementFooterLinkButton" runat="server" OnClick="MemberManagementFooterLinkButton_Click">Member Management</asp:LinkButton>
-                </div>
-            </div>
-            <div class="row footer2">
-                <div class="col text-center">
-                    &copy;2023 - Anika Aga SAINT PIERRE&nbsp;
-                </div>
-            </div>
-        </footer>
     </form>
 </body>
 </html>

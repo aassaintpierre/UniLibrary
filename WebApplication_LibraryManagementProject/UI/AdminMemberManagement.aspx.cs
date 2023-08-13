@@ -19,10 +19,10 @@ namespace WebApplication_LibraryManagementProject.UI
         protected void GoButton_Click(object sender, EventArgs e)
         {
             Clear();
-            string id = MemberIdTextBox.Text.Trim();
-            if (!id.Equals(""))
+            string userid = UsernameTextBox.Text.Trim();
+            if (!userid.Equals(""))
             {
-                var v = db.Members.Where(m => m.Id == id).FirstOrDefault();
+                var v = db.Members.Where(m => m.Username == userid).FirstOrDefault();
                 if(v != null)
                 {
                     FullNameTextBox.Text = v.FullName;
@@ -55,10 +55,10 @@ namespace WebApplication_LibraryManagementProject.UI
         }
         private void UpdateMemberStatusById(string status)
         {
-            string id = MemberIdTextBox.Text.Trim();
-            if (!id.Equals(""))
+            string userid = UsernameTextBox.Text.Trim();
+            if (!userid.Equals(""))
             {
-                var v = db.Members.Where(m => m.Id == id).FirstOrDefault();
+                var v = db.Members.Where(m => m.Username == userid).FirstOrDefault();
                 if (v != null)
                 {
                     v.AccountStatus = status;

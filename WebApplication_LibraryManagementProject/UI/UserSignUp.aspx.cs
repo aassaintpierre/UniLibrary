@@ -17,15 +17,15 @@ namespace WebApplication_LibraryManagementProject.UI
             Member member = new Member();
             member.FullName = FullNameTextBox.Text.Trim();
             member.Email = EmailTextBox.Text.Trim();
-            member.Username = User_name.Text.Trim();
+            /*member.Username = User_name.Text.Trim();*/
             member.AccountStatus = Status.SelectedItem.Value;
             member.Access = User_access.SelectedItem.Value;
-            member.Id = UserIdTextBox.Text.Trim();
+            member.Username = UsernameTextBox.Text.Trim();
             member.Password = PasswordTextBox.Text.Trim();
 
             try
             {
-                if (CheckIfMemberExists(member.Id))
+                if (CheckIfMemberExists(member.Username))
                 {
                     Response.Write("<script>alert('User Already Exists')</script>");
                 }
@@ -42,9 +42,9 @@ namespace WebApplication_LibraryManagementProject.UI
             }
         }
 
-        private bool CheckIfMemberExists(string id)
+        private bool CheckIfMemberExists(string username)
         {
-            var v = db.Members.Where(m => m.Id == id).FirstOrDefault();
+            var v = db.Members.Where(m => m.Username == username).FirstOrDefault();
             return v != null;
         }
     }

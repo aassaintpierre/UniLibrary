@@ -14,7 +14,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card" style="margin: 10px">
                     <div class="card-body">
@@ -62,7 +62,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="body_UserIdTextBox">Username</label>
-                                    <asp:TextBox class="form-control" placeholder="User ID" ID="UserIdTextBox" runat="server" ReadOnly="true"></asp:TextBox>
+                                    <asp:TextBox class="form-control" placeholder="User ID" ID="UserNameTextBox" runat="server" ReadOnly="true"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="col-md-4">

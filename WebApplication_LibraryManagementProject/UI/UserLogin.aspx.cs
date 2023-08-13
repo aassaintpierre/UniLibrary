@@ -18,16 +18,16 @@ namespace WebApplication_LibraryManagementProject.UI
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            string id = MemberIdTextBox.Text.Trim();
+            string id = UsernameTextBox.Text.Trim();
             string password = PasswordTextBox.Text.Trim();
-            var v = db.Members.Where(m => m.Id == id && m.Password == password).FirstOrDefault();
+            var v = db.Members.Where(m => m.Username == id && m.Password == password).FirstOrDefault();
             if(v != null)
             {
                 //Allow access
-                Session["username"] = v.Id;
+                Session["username"] = v.Username;
                 Session["fullname"] = v.FullName;
                 Session["status"] = v.AccountStatus;
-                Session["role"] = "user";
+                Session["role"] = v.Access;
                 Response.Redirect("UserProfile.aspx");
             }
             else

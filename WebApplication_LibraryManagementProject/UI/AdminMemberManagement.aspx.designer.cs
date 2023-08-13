@@ -15,13 +15,13 @@ namespace WebApplication_LibraryManagementProject.UI
     {
 
         /// <summary>
-        /// MemberIdTextBox control.
+        /// UsernameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MemberIdTextBox;
+        protected global::System.Web.UI.WebControls.TextBox UsernameTextBox;
 
         /// <summary>
         /// GoButton control.

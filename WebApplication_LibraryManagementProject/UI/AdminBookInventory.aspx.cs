@@ -21,12 +21,12 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 FillDropdownsWithAuthorPublisher();
             }
-            BooksGridViewDataBind();
+            /*BooksGridViewDataBind();*/
         }
         private void BooksGridViewDataBind()
         {
-            BooksGridView.DataSource = db.Books.ToList();
-            BooksGridView.DataBind();
+            /*BooksGridView.DataSource = db.Books.ToList();
+            BooksGridView.DataBind();*/
         }
         private void FillDropdownsWithAuthorPublisher()
         {
@@ -76,13 +76,13 @@ namespace WebApplication_LibraryManagementProject.UI
             book.Id = BookIdTextBox.Text.Trim();
             book.Name = BookNameTextBox.Text.Trim();
             book.Language = LanguageDropDownList.SelectedItem.Value;
-            book.AuthorId = AutherNameDropDownList.SelectedItem.Value;
-            book.PublisherId = PublisherNameDropDownList.SelectedItem.Value;
-            book.PublishDate = Convert.ToDateTime(PublishDateTextBox.Text.Trim());
+            book.AuthorId = AuthorName.Text.Trim();
+            /*book.PublisherId = PublisherNameDropDownList.SelectedItem.Value;
+            book.PublishDate = Convert.ToDateTime(PublishDateTextBox.Text.Trim());*/
             book.Genre = genres;
-            book.Edition = EditionTextBox.Text.Trim();
-            book.BookCost = Convert.ToDouble(BookCostTextBox.Text.Trim());
-            book.NoOfPages = Convert.ToInt32(PagesTextBox.Text.Trim());
+           /* book.Edition = EditionTextBox.Text.Trim();*/
+/*            book.BookCost = Convert.ToDouble(BookCostTextBox.Text.Trim());
+            book.NoOfPages = Convert.ToInt32(PagesTextBox.Text.Trim());*/
             book.ActualStock = Convert.ToInt32(ActualStockTextBox.Text.Trim());
             if (operation.Equals("update"))
             {
@@ -92,7 +92,7 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 book.CurrentStock = book.ActualStock;
             }
-            book.BookDescription = BookDescriptionTextBox.Text;
+           /* book.BookDescription = BookDescriptionTextBox.Text;*/
             book.BookImgLink = filepath;
             return book;
         }
@@ -105,15 +105,14 @@ namespace WebApplication_LibraryManagementProject.UI
         {
             BookIdTextBox.Text = "";
             BookNameTextBox.Text = "";
+            AuthorName.Text = "";
             LanguageDropDownList.SelectedIndex = 0;
-            AutherNameDropDownList.SelectedIndex = 0;
-            PublisherNameDropDownList.SelectedIndex = 0;
             PublishDateTextBox.Text = "";
-            EditionTextBox.Text = "";
+            /*EditionTextBox.Text = "";
             BookCostTextBox.Text = "";
-            PagesTextBox.Text = "";
+            PagesTextBox.Text = "";*/
             ActualStockTextBox.Text = "";
-            BookDescriptionTextBox.Text = "";
+           /* BookDescriptionTextBox.Text = "";*/
         }
         protected void AddBookButton_Click(object sender, EventArgs e)
         {
@@ -128,7 +127,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     db.Books.Add(book);
                     db.SaveChanges();
-                    BooksGridViewDataBind();
+                    /*BooksGridViewDataBind();*/
                     Clear();
                 }
             }
@@ -147,19 +146,19 @@ namespace WebApplication_LibraryManagementProject.UI
                 if (v != null)
                 {
                     v.Genre = book.Genre;
-                    v.PublishDate = book.PublishDate;
+                    /*v.PublishDate = book.PublishDate;*/
                     v.Language = book.Language;
-                    v.Edition = book.Edition;
+                    /*v.Edition = book.Edition;
                     v.BookCost = book.BookCost;
                     v.NoOfPages = book.NoOfPages;
-                    v.BookDescription = book.BookDescription;
+                    v.BookDescription = book.BookDescription;*/
                     v.ActualStock = book.ActualStock;
                     v.CurrentStock = book.CurrentStock;
                     v.BookImgLink = book.BookImgLink;
                     v.AuthorId = book.AuthorId;
-                    v.PublisherId = book.PublisherId;
+                    /*v.PublisherId = book.PublisherId;*/
                     db.SaveChanges();
-                    BooksGridViewDataBind();
+                    /*BooksGridViewDataBind();*/
                     Clear();
                 }
                 else
@@ -183,7 +182,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     db.Books.Remove(v);
                     db.SaveChanges();
-                    BooksGridViewDataBind();
+                    /*BooksGridViewDataBind();*/
                     Clear();
                 }
                 else
@@ -207,9 +206,9 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     BookNameTextBox.Text = v.Name;
                     LanguageDropDownList.SelectedValue = v.Language;
-                    PublisherNameDropDownList.SelectedValue = v.PublisherId;
-                    AutherNameDropDownList.SelectedValue = v.AuthorId;
-                    PublishDateTextBox.Text = v.PublishDate.ToShortDateString();
+                    /*PublisherNameDropDownList.SelectedValue = v.PublisherId;*/
+                    AuthorName.Text = v.AuthorId;
+                   /* PublishDateTextBox.Text = v.PublishDate.ToShortDateString();*/
                     string[] genres = v.Genre.Split(',');
                     for (int i = 0; i < genres.Length; i++)
                     {
@@ -221,16 +220,16 @@ namespace WebApplication_LibraryManagementProject.UI
                             }
                         }
                     }
-                    EditionTextBox.Text = v.Edition;
+                    /*EditionTextBox.Text = v.Edition;
                     BookCostTextBox.Text = v.BookCost.ToString();
-                    PagesTextBox.Text = v.NoOfPages.ToString();
+                    PagesTextBox.Text = v.NoOfPages.ToString();*/
                     gActualStock = v.ActualStock;
                     gCurrentStock = v.CurrentStock;
                     gIssuedBooks = v.ActualStock - v.CurrentStock;
                     ActualStockTextBox.Text = v.ActualStock.ToString();
                     CurrentStockTextBox.Text = v.CurrentStock.ToString();
                     IssuedBooksTextBox.Text = gIssuedBooks.ToString();
-                    BookDescriptionTextBox.Text = v.BookDescription;
+                    /*BookDescriptionTextBox.Text = v.BookDescription;*/
                     gImagePath = v.BookImgLink;
                 }
                 else

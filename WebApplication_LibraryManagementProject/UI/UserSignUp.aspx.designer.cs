@@ -24,15 +24,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.TextBox FullNameTextBox;
 
         /// <summary>
-        /// UserIdTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UserIdTextBox;
-
-        /// <summary>
         /// EmailTextBox control.
         /// </summary>
         /// <remarks>
@@ -60,13 +51,13 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.DropDownList User_access;
 
         /// <summary>
-        /// User_name control.
+        /// UsernameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox User_name;
+        protected global::System.Web.UI.WebControls.TextBox UsernameTextBox;
 
         /// <summary>
         /// PasswordTextBox control.

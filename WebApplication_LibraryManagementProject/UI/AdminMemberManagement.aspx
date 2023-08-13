@@ -25,10 +25,10 @@
                         </div>
                         <div class="row">
                             <div class="col-md-3">
-                                <label for="body_MemberIdTextBox">Member ID</label>
+                                <label for="body_UsernameTextBox">Username</label>
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <asp:TextBox class="form-control" placeholder="ID" ID="MemberIdTextBox" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" placeholder="ID" ID="UsernameTextBox" runat="server"></asp:TextBox>
                                         <asp:Button CssClass="btn btn-primary" ID="GoButton" runat="server" Text="Go" OnClick="GoButton_Click" />
                                     </div>
                                 </div>

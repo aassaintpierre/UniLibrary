@@ -24,7 +24,7 @@ namespace WebApplication_LibraryManagementProject.UI
             try
             {
                 string userId = Session["username"].ToString();
-                var v = db.Members.Where(m => m.Id == userId).FirstOrDefault();
+                var v = db.Members.Where(m => m.Username == userId).FirstOrDefault();
                 if (v != null)
                 {
                     AccountStatusLabel.Text = v.AccountStatus;
@@ -42,7 +42,7 @@ namespace WebApplication_LibraryManagementProject.UI
                     }
                     FullNameTextBox.Text = v.FullName;
                     EmailIdTextBox.Text = v.Email;
-                    UserIdTextBox.Text = v.Id;
+                    UserNameTextBox.Text = v.Username;
                     NewPasswordTextBox.Text = "";
                 }
                 else
@@ -60,7 +60,7 @@ namespace WebApplication_LibraryManagementProject.UI
             try
             {
                 string userId = Session["username"].ToString();
-                var v = db.Members.Where(m => m.Id == userId).FirstOrDefault();
+                var v = db.Members.Where(m => m.Username == userId).FirstOrDefault();
                 if (PasswordTextBox.Text.Trim().Equals(v.Password))
                 {
                     v.FullName = FullNameTextBox.Text.Trim();
@@ -84,27 +84,6 @@ namespace WebApplication_LibraryManagementProject.UI
             }
         }
 
-        protected void BooksGridView_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            try
-            {
-                if (e.Row.RowType == DataControlRowType.DataRow)
-                {
-                    if (e.Row.RowType == DataControlRowType.DataRow)
-                    {
-                        DateTime dt = Convert.ToDateTime(e.Row.Cells[2].Text);
-                        DateTime today = DateTime.Today;
-                        if (today > dt)
-                        {
-                            e.Row.BackColor = System.Drawing.Color.PaleVioletRed;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex.Message + "');</script>");
-            }
-        }
+        
     }
 }
