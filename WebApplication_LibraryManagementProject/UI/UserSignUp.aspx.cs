@@ -28,12 +28,15 @@ namespace WebApplication_LibraryManagementProject.UI
                 if (CheckIfMemberExists(member.Username))
                 {
                     Response.Write("<script>alert('User Already Exists')</script>");
+
                 }
                 else
                 {
                     db.Members.Add(member);
                     db.SaveChanges();
                     Response.Write("<script>alert('User registered successfully.')</script>");
+                    Response.Redirect("UserProfile.aspx");
+
                 }
             }
             catch (Exception)

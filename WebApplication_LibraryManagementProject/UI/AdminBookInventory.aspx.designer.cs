@@ -15,15 +15,6 @@ namespace WebApplication_LibraryManagementProject.UI
     {
 
         /// <summary>
-        /// BookCoverFileUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload BookCoverFileUpload;
-
-        /// <summary>
         /// BookIdTextBox control.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace WebApplication_LibraryManagementProject.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox AuthorName;
-
-        /// <summary>
-        /// PublishDateTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PublishDateTextBox;
 
         /// <summary>
         /// GenreListBox control.

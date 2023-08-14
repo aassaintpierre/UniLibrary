@@ -27,8 +27,8 @@ namespace WebApplication_LibraryManagementProject.UI
                 Session["username"] = v.Username;
                 Session["fullname"] = v.FullName;
                 Session["status"] = "";
-                Session["role"] = "admin";
-                Response.Redirect("HomePage.aspx");
+                Session["role"] = "Admin";
+                Response.Redirect("AdminBookInventory.aspx");
             }
             else
             {

@@ -27,25 +27,21 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                <h3>Book Details</h3>
+                                <h3>Book Management</h3>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col text-center">
-                                <img id="imgview" width="100px" src="../Images/Books/books1.png" />
+                                <img id="imgview" width="100px" src="../Images/Books/writer.png" />
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col text-center">
-                                <asp:FileUpload onchange="readURL(this);" CssClass="form-control" ID="BookCoverFileUpload" runat="server" />
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col-md-4">
                                 <label for="body_BookIdTextBox">Book ID</label>
@@ -84,11 +80,9 @@
                                     <asp:TextBox Class="form-control" placeholder="Author" ID="AuthorName" runat="server">
                                     </asp:TextBox>
                                 </div>
-                                <div class="form-group">
-                                    <label for="body_PublishDateTextBox">Publish Date</label>
-                                    <asp:TextBox class="form-control" placeholder="dd-mm-yyyy" ID="PublishDateTextBox" runat="server"></asp:TextBox>
-                                </div>
+
                             </div>
+
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="body_GenreListBox">Genre</label>

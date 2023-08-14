@@ -14,23 +14,23 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 if (Session["role"].Equals(""))
                 {
-                    ViewBooksLink.Visible = true;
+                    ViewBooksLink.Visible = false;
                     UserLoginLink.Visible = true;
                     LogoutLink.Visible = false;
                     HelloUserNavLinkButton.Visible = false;
                     BookIssuingLink.Visible = false;
                     MemberManagementLink.Visible = false;
                 }
-                else if (Session["role"].Equals("user"))
+                else if (Session["role"].Equals("User"))
                 {
                     ViewBooksLink.Visible = true;
                     UserLoginLink.Visible = false;
                     LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, " + Session["fullname"];
                     BookIssuingLink.Visible = true;
-                    MemberManagementLink.Visible = true;
+                    MemberManagementLink.Visible = false;
                 }
-                else if (Session["role"].Equals("admin"))
+                else if (Session["role"].Equals("Admin"))
                 {
                     ViewBooksLink.Visible = true;
                     UserLoginLink.Visible = false;

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebApplication_LibraryManagementProject.Models;
 
@@ -13,9 +10,9 @@ namespace WebApplication_LibraryManagementProject.UI
         private UNILibraryDbContext db = new UNILibraryDbContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridViewDataBind();
+            /*GridViewDataBind();*/
         }
-        private void GridViewDataBind()
+        /*private void GridViewDataBind()
         {
             try
             {
@@ -26,7 +23,7 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 Response.Write("<script>alert('" + ex + "')</script>");
             }
-        }
+        }*/
         private bool CheckIfBookExists(string id)
         {
             var v = db.Books.Where(b => b.Id == id).FirstOrDefault();
@@ -106,7 +103,7 @@ namespace WebApplication_LibraryManagementProject.UI
                                 book.CurrentStock--;
                                 db.BookIssues.Add(bookIssue);
                                 db.SaveChanges();
-                                GridViewDataBind();
+                                /*GridViewDataBind();*/
                                 Clear(); 
                             }
                             else
@@ -146,7 +143,7 @@ namespace WebApplication_LibraryManagementProject.UI
                         v.Book.CurrentStock++;
                         db.BookIssues.Remove(v);
                         db.SaveChanges();
-                        GridViewDataBind();
+                        /*GridViewDataBind();*/
                         Clear();
                     }
                     else

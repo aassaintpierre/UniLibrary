@@ -52,11 +52,11 @@
                     </li>
 
                     <li class="nav-item">                    
-                    <asp:LinkButton class="footerlinks" ID="BookIssuingLink" runat="server" OnClick="BookIssuingLinkButton_Click">Assign Books</asp:LinkButton>&nbsp;
+                    <asp:LinkButton class="nav-link" ID="BookIssuingLink" runat="server" OnClick="BookIssuingLinkButton_Click">Assign Books</asp:LinkButton>
                     </li>
 
                     <li class="nav-item">                    
-                    <asp:LinkButton class="footerlinks" ID="MemberManagementLink" runat="server" OnClick="MemberManagementLinkButton_Click">Member Management</asp:LinkButton>
+                    <asp:LinkButton class="nav-link" ID="MemberManagementLink" runat="server" OnClick="MemberManagementLinkButton_Click">Member Management</asp:LinkButton>
                     </li>
 
                     <li class="nav-item">

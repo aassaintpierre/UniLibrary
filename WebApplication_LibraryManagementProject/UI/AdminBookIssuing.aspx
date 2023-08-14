@@ -19,9 +19,14 @@
         });
     </script>
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
+
+    
     <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
+
+            <!-- Assign book section-->
             <div class="col-md-5">
                 <div class="card" style="margin: 10px">
                     <div class="card-body">
@@ -101,14 +106,19 @@
                 <br />
             </div>
 
-            <div class="col-md-7">
+            <!--<div class="col-md-5">
                 <div class="card" style="margin: 10px">
                     <div class="card-body">
                         <div class="row">
+
                             <div class="col text-center">
-                                <h3>Issued Book List</h3>
+                                <h3>Add Books</h3>
                             </div>
+
                         </div>
+
+
+
                         <div class="row">
                             <div class="col">
                                 <asp:GridView ID="IssuedBookGridView" CssClass="table table-striped table-bordered" runat="server" OnRowDataBound="IssuedBookGridView_RowDataBound" AutoGenerateColumns="False">
@@ -123,9 +133,11 @@
                                 </asp:GridView>
                             </div>
                         </div>
+
                     </div>
                 </div>
-            </div>
+            </div>-->
+
         </div>
     </div>
 
