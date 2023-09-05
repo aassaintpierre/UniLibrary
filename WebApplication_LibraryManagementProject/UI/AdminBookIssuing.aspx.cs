@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using System.Web.UI.WebControls;
 using WebApplication_LibraryManagementProject.Models;
@@ -54,8 +55,10 @@ namespace WebApplication_LibraryManagementProject.UI
             EndDateTextBox.Text = "";
             ErrorLabel.Text = "";
         }
+
         protected void GoButton_Click(object sender, EventArgs e)
         {
+
             try
             {
                 var member = db.Members.Where(m => m.Username == UsernameTextBox.Text.Trim()).FirstOrDefault();
@@ -64,7 +67,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     MemberNameTextBox.Text = member.FullName;
                     BookNameTextBox.Text = book.Name;
-                    ErrorLabel.Text = "";
+                    ErrorLabel.Text = "Go Bouton clicked";
                 }
                 else
                 {
@@ -79,13 +82,15 @@ namespace WebApplication_LibraryManagementProject.UI
 
         protected void IssueButton_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 BookIssue bookIssue = new BookIssue();
                 bookIssue.MemberId = UsernameTextBox.Text.Trim();
                 bookIssue.BookId = BookIdTextBox.Text.Trim();
-                bookIssue.IssueDate = Convert.ToDateTime(StartDateTextBox.Text.Trim());
-                bookIssue.DueDate = Convert.ToDateTime(EndDateTextBox.Text.Trim());
+                bookIssue.IssueDate = StartDateTextBox.Text.Trim();
+                ErrorLabel.Text = StartDateTextBox.Text.Trim();
+
 
                 if (CheckIfBookExists(bookIssue.BookId) && CheckIfMemberExists(bookIssue.MemberId))
                 {
@@ -119,7 +124,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 }
                 else
                 {
-                    Response.Write("<script>alert('Book or Mebmber doesn't exist!')</script>");
+                    Response.Write("<script>alert('Book or Member doesn't exist!')</script>");
                 }
             }
             catch (Exception ex)
@@ -130,6 +135,7 @@ namespace WebApplication_LibraryManagementProject.UI
 
         protected void ReturnButton_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 string mId = UsernameTextBox.Text.Trim();

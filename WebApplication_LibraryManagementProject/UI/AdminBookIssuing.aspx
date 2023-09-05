@@ -74,19 +74,19 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="body_StartDateTextBox">Start Date</label>
                                     <asp:TextBox class="form-control" placeholder="Start Date" ID="StartDateTextBox" runat="server"></asp:TextBox>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <!--<div class="col-md-6">
                                 <div class="form-group">
                                     <label for="body_EndDateTextBox">End Date</label>
                                     <div class="input-group">
                                         <asp:TextBox class="form-control" placeholder="End Date" ID="EndDateTextBox" runat="server"></asp:TextBox>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <div class="row">
@@ -99,11 +99,12 @@
                             <div class="col text-center">
                                 <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="text-danger"></asp:Label>
                             </div>
+                            <br />
+                            <br />
                         </div>
                     </div>
                 </div>
-                <a href="Homepage.aspx"><< Back to Home</a><br />
-                <br />
+                
             </div>
 
             <!--<div class="col-md-5">

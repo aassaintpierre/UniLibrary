@@ -13,11 +13,11 @@ namespace WebApplication_LibraryManagementProject.Models
         public string MemberId { get; set; }
         [Key, Column(Order = 1)]
         public string BookId { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime IssueDate { get; set; }
-        [DataType(DataType.Date)]
-        public DateTime DueDate { get; set; }
-        public virtual Member Member { get; set; }
+
+        public string IssueDate { get; set; }
+
+        /*public string DueDate { get; set; }*/
+        /*public virtual Member Member { get; set; }*/
         public virtual Book Book { get; set; }
     }
 }
