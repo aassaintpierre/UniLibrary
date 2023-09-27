@@ -32,10 +32,10 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <a href="HomePage.aspx" class="navbar-brand">
+                    <div class="navbar-brand">
                         <img src="../Images/LMS2.png" height="70" />
                         UniLibrary
-                    </a>
+                    </div>
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
