@@ -59,10 +59,6 @@
                     <asp:LinkButton class="nav-link" ID="MemberManagementLink" runat="server" OnClick="MemberManagementLinkButton_Click">Member Management</asp:LinkButton>
                     </li>
 
-                    <li class="nav-item">                    
-                    <asp:linkbutton class="nav-link" ID="AddMemberLink" runat="server" OnClick="AddMemberLinkButton_Click">Add Member</asp:linkbutton>
-                    </li>
-
                     <li class="nav-item">
                         <asp:LinkButton class="nav-link" ID="UserLoginLink" runat="server" OnClick="UserLoginNavLinkButton_Click">Login</asp:LinkButton>
                     </li>

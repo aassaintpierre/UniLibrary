@@ -13,7 +13,7 @@ namespace WebApplication_LibraryManagementProject.UI
         private UNILibraryDbContext db = new UNILibraryDbContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*MemberGridView.DataBind();*/
+            MemberGridView.DataBind();
         }
 
         protected void GoButton_Click(object sender, EventArgs e)
@@ -35,6 +35,11 @@ namespace WebApplication_LibraryManagementProject.UI
                     Response.Write("<script>alert('Account Not Found')</script>");
                 }
             }
+        }
+
+        protected void AddUserButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserSignUp.aspx");
         }
 
         protected void ActiveButton_Click(object sender, EventArgs e)

@@ -21,7 +21,6 @@ namespace WebApplication_LibraryManagementProject.UI
                     HelloUserNavLinkButton.Visible = false;
                     BookIssuingLink.Visible = false;
                     MemberManagementLink.Visible = false;
-                    AddMemberLink.Visible = false;
                 }
                 else if (Session["role"].Equals("User"))
                 {
@@ -32,7 +31,6 @@ namespace WebApplication_LibraryManagementProject.UI
                     HelloUserNavLinkButton.Text = "Hello, " + Session["fullname"];
                     BookIssuingLink.Visible = true;
                     MemberManagementLink.Visible = false;
-                    AddMemberLink.Visible = false;
                 }
                 else if (Session["role"].Equals("Admin"))
                 {
@@ -43,7 +41,6 @@ namespace WebApplication_LibraryManagementProject.UI
                     HelloUserNavLinkButton.Text = "Hello, Admin";
                     BookIssuingLink.Visible = true;
                     MemberManagementLink.Visible = true;
-                    AddMemberLink.Visible = true;
                 }
             }
             catch (Exception)
@@ -64,11 +61,6 @@ namespace WebApplication_LibraryManagementProject.UI
         protected void MemberManagementLinkButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminMemberManagement.aspx");
-        }
-
-        protected void AddMemberLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UserSignUp.aspx");
         }
 
         protected void UserLoginNavLinkButton_Click(object sender, EventArgs e)
