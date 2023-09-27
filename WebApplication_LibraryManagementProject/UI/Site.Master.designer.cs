@@ -60,13 +60,13 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.LinkButton ViewBooksLink;
 
         /// <summary>
-        /// BookIssuingLink control.
+        /// BookManagLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton BookIssuingLink;
+        protected global::System.Web.UI.WebControls.LinkButton BookManagLink;
 
         /// <summary>
         /// MemberManagementLink control.
@@ -76,15 +76,6 @@ namespace WebApplication_LibraryManagementProject.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton MemberManagementLink;
-
-        /// <summary>
-        /// UserLoginLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton UserLoginLink;
 
         /// <summary>
         /// LogoutLink control.

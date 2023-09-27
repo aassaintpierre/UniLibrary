@@ -141,6 +141,11 @@ namespace WebApplication_LibraryManagementProject.UI
             }
         }
 
+        protected void AssignBookButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminBookIssuing.aspx");
+        }
+
         protected void GoButton_Click(object sender, EventArgs e)
         {
             string id = BookIdTextBox.Text.Trim();

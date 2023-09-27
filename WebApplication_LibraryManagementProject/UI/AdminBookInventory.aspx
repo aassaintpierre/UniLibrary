@@ -26,20 +26,23 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="server">
-    <div class="container-fluid">
+
+    <div class="container-fluid" style="margin: 10px">
         <div class="row justify-content-center">
+
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <div class="col text-center">
-                                <h3>Book Management</h3>
-                            </div>
-                        </div>
-                        <div class="row">
+
                             <div class="col text-center">
                                 <img id="imgview" width="100px" src="../Images/Books/writer.png" />
+
+                                <br />
+
+                                <h3>Book Management</h3>
                             </div>
+
                         </div>
                         
                         <div class="row">
@@ -150,6 +153,12 @@
                             <div class="col-4">
                                 <asp:Button CssClass="btn btn-block btn-danger" ID="DeleteBookButton" runat="server" Text="Delete" OnClick="DeleteBookButton_Click" />
                             </div>
+                        </div>
+                        
+                        <br />
+
+                        <div class="col-12">
+                            <asp:LinkButton CssClass="btn btn-block btn-success" ID="AssignBookButton" runat="server" OnClick="AssignBookButton_Click">Assign Book</asp:LinkButton>
                         </div>
                     </div>
                 </div>

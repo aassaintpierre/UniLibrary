@@ -34,7 +34,7 @@
                 <ul class="navbar-nav mr-auto">
                     <a href="HomePage.aspx" class="navbar-brand">
                         <img src="../Images/LMS2.png" height="70" />
-                        Uni-Library
+                        UniLibrary
                     </a>
                 </ul>
 
@@ -52,15 +52,11 @@
                     </li>
 
                     <li class="nav-item">                    
-                    <asp:LinkButton class="nav-link" ID="BookIssuingLink" runat="server" OnClick="BookIssuingLinkButton_Click">Assign Books</asp:LinkButton>
+                    <asp:LinkButton class="nav-link" ID="BookManagLink" runat="server" OnClick="BookManagLinkButton_Click">Book Management</asp:LinkButton>
                     </li>
 
                     <li class="nav-item">                    
                     <asp:LinkButton class="nav-link" ID="MemberManagementLink" runat="server" OnClick="MemberManagementLinkButton_Click">Member Management</asp:LinkButton>
-                    </li>
-
-                    <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="UserLoginLink" runat="server" OnClick="UserLoginNavLinkButton_Click">Login</asp:LinkButton>
                     </li>
                     
                     <li class="nav-item">

@@ -17,7 +17,6 @@ namespace WebApplication_LibraryManagementProject.UI
             Member member = new Member();
             member.FullName = FullNameTextBox.Text.Trim();
             member.Email = EmailTextBox.Text.Trim();
-            /*member.Username = User_name.Text.Trim();*/
             member.AccountStatus = Status.SelectedItem.Value;
             member.Access = User_access.SelectedItem.Value;
             member.Username = UsernameTextBox.Text.Trim();
@@ -35,7 +34,11 @@ namespace WebApplication_LibraryManagementProject.UI
                     db.Members.Add(member);
                     db.SaveChanges();
                     Response.Write("<script>alert('User registered successfully.')</script>");
-                    Response.Redirect("UserProfile.aspx");
+
+                    FullNameTextBox.Text = "";
+                    EmailTextBox.Text = "";
+                    UsernameTextBox.Text = "";
+                    PasswordTextBox.Text = "";
 
                 }
             }

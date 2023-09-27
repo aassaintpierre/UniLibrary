@@ -28,11 +28,11 @@ namespace WebApplication_LibraryManagementProject.UI
                 if (v != null)
                 {
                     AccountStatusLabel.Text = v.AccountStatus;
-                    if (v.AccountStatus.Equals("active"))
+                    if (v.AccountStatus.Equals("Active"))
                     {
                         AccountStatusLabel.CssClass = "badge badge-pill badge-success";
                     }
-                    else if (v.AccountStatus.Equals("pending"))
+                    else if (v.AccountStatus.Equals("Pending"))
                     {
                         AccountStatusLabel.CssClass = "badge badge-pill badge-warning";
                     }
@@ -55,6 +55,8 @@ namespace WebApplication_LibraryManagementProject.UI
                 Response.Write("<script>alert('" + ex + "')</script>");
             }
         }
+
+
         protected void UpdateButton_Click(object sender, EventArgs e)
         {
             try
@@ -72,6 +74,7 @@ namespace WebApplication_LibraryManagementProject.UI
                     }
                     db.SaveChanges();
                     Response.Write("<script>alert('Informations updated successfully!')</script>");
+                    NewPasswordTextBox.Text = "";
                 }
                 else
                 {

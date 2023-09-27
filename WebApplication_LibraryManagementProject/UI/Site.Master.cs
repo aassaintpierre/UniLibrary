@@ -16,30 +16,27 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     AboutLink.Visible = true;
                     ViewBooksLink.Visible = false;
-                    UserLoginLink.Visible = true;
                     LogoutLink.Visible = false;
                     HelloUserNavLinkButton.Visible = false;
-                    BookIssuingLink.Visible = false;
+                    BookManagLink.Visible = false;
                     MemberManagementLink.Visible = false;
                 }
                 else if (Session["role"].Equals("User"))
                 {
                     AboutLink.Visible = false;
                     ViewBooksLink.Visible = true;
-                    UserLoginLink.Visible = false;
                     LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, " + Session["fullname"];
-                    BookIssuingLink.Visible = true;
+                    BookManagLink.Visible = true;
                     MemberManagementLink.Visible = false;
                 }
                 else if (Session["role"].Equals("Admin"))
                 {
                     AboutLink.Visible = false;
                     ViewBooksLink.Visible = true;
-                    UserLoginLink.Visible = false;
                     LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, Admin";
-                    BookIssuingLink.Visible = true;
+                    BookManagLink.Visible = true;
                     MemberManagementLink.Visible = true;
                 }
             }
@@ -53,19 +50,14 @@ namespace WebApplication_LibraryManagementProject.UI
             Response.Redirect("AboutUs.aspx");
         }
 
-        protected void BookIssuingLinkButton_Click(object sender, EventArgs e)
+        protected void BookManagLinkButton_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AdminBookIssuing.aspx");
+            Response.Redirect("AdminBookInventory.aspx");
         }
 
         protected void MemberManagementLinkButton_Click(object sender, EventArgs e)
         {
             Response.Redirect("AdminMemberManagement.aspx");
-        }
-
-        protected void UserLoginNavLinkButton_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("UserLogin.aspx");
         }
 
         protected void SignUpNavLinkButton_Click(object sender, EventArgs e)
@@ -84,7 +76,7 @@ namespace WebApplication_LibraryManagementProject.UI
 
         protected void HelloUserNavLinkButton_Click(object sender, EventArgs e)
         {
-            if (Session["role"].Equals("user"))
+            if (Session["role"].Equals("User") || Session["role"].Equals("Admin"))
             {
                 Response.Redirect("UserProfile.aspx");
             }

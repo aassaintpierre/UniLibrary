@@ -44,18 +44,18 @@ namespace WebApplication_LibraryManagementProject.UI
 
         protected void ActiveButton_Click(object sender, EventArgs e)
         {
-            UpdateMemberStatusById("active");
+            UpdateMemberStatusById("Active");
             GoButton_Click(sender, e);
         }
 
         protected void PendingButton_Click(object sender, EventArgs e)
         {
-            UpdateMemberStatusById("pending");
+            UpdateMemberStatusById("Pending");
             GoButton_Click(sender, e);
         }
         protected void DeactiveButton_Click(object sender, EventArgs e)
         {
-            UpdateMemberStatusById("deactive");
+            UpdateMemberStatusById("Deactive");
             GoButton_Click(sender, e);
         }
         private void UpdateMemberStatusById(string status)

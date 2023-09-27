@@ -20,7 +20,7 @@ namespace WebApplication_LibraryManagementProject.UI
         {
             string username = AdminIdTextBox.Text.Trim();
             string password = PasswordTextBox.Text.Trim();
-            var v = db.AdminLogin.Where(m => m.Username == username && m.Password == password).FirstOrDefault();
+            var v = db.Members.Where(m => m.Username == username && m.Password == password && m.Access == "Admin").FirstOrDefault();
             if (v != null)
             {
                 //Allow access
@@ -33,7 +33,7 @@ namespace WebApplication_LibraryManagementProject.UI
             else
             {
                 //Deny Access
-                Response.Write("<script>alert('Invalid Request')</script>");
+                Response.Write("<script>alert('Incorrect Username or Password')</script>");
             }
         }
 
