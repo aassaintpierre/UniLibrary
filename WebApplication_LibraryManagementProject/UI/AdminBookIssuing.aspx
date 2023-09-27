@@ -91,7 +91,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <asp:Button CssClass="btn btn-block btn-primary" ID="IssueButton" runat="server" Text="Issue" OnClick="IssueButton_Click" />
+                                <asp:Button CssClass="btn btn-block btn-primary" ID="IssueButton" runat="server" Text="Assign" OnClick="IssueButton_Click" />
                             </div>
                             <div class="col-md-6">
                                 <asp:Button CssClass="btn btn-block btn-success" ID="ReturnButton" runat="server" Text="Return" OnClick="ReturnButton_Click" />

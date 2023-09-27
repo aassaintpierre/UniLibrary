@@ -44,13 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="form-group">
-                                    <a style="text-decoration: none" href="UserSignUp.aspx"><input class="btn btn-block btn-info btn-lg" id="SignUpButton" type="button" value="Sign Up" /></a>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
                 

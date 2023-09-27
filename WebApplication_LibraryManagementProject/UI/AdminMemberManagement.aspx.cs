@@ -13,7 +13,7 @@ namespace WebApplication_LibraryManagementProject.UI
         private UNILibraryDbContext db = new UNILibraryDbContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            MemberGridView.DataBind();
+            /*MemberGridView.DataBind();*/
         }
 
         protected void GoButton_Click(object sender, EventArgs e)

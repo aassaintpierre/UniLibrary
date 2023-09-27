@@ -44,7 +44,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="AboutUs.aspx" id="About" class="nav-link">About Us</a>
+                        <asp:LinkButton class="nav-link" ID="AboutLink" runat="server" OnClick="AboutLinkButton_Click">About</asp:LinkButton>
                     </li>
 
                     <li class="nav-item">
@@ -57,6 +57,10 @@
 
                     <li class="nav-item">                    
                     <asp:LinkButton class="nav-link" ID="MemberManagementLink" runat="server" OnClick="MemberManagementLinkButton_Click">Member Management</asp:LinkButton>
+                    </li>
+
+                    <li class="nav-item">                    
+                    <asp:linkbutton class="nav-link" ID="AddMemberLink" runat="server" OnClick="AddMemberLinkButton_Click">Add Member</asp:linkbutton>
                     </li>
 
                     <li class="nav-item">

@@ -1736,7 +1736,9 @@
     <Content Include="UI\HomePage.aspx" />
     <Content Include="UI\AdminLogin.aspx" />
     <Content Include="UI\UserLogin.aspx" />
-    <Content Include="UI\UserSignUp.aspx" />
+    <Content Include="UI\UserSignUp.aspx">
+      <BrowseToURL>~/UI/UserSignUp.aspx</BrowseToURL>
+    </Content>
     <Content Include="UI\UserProfile.aspx" />
     <Content Include="UI\AdminBookIssuing.aspx" />
     <Content Include="UI\AdminMemberManagement.aspx" />

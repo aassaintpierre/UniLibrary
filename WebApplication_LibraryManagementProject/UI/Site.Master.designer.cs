@@ -42,6 +42,15 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.LinkButton HelloUserNavLinkButton;
 
         /// <summary>
+        /// AboutLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton AboutLink;
+
+        /// <summary>
         /// ViewBooksLink control.
         /// </summary>
         /// <remarks>
@@ -67,6 +76,15 @@ namespace WebApplication_LibraryManagementProject.UI
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton MemberManagementLink;
+
+        /// <summary>
+        /// AddMemberLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton AddMemberLink;
 
         /// <summary>
         /// UserLoginLink control.
