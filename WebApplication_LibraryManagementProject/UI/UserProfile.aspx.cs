@@ -24,7 +24,7 @@ namespace WebApplication_LibraryManagementProject.UI
             try
             {
                 string userId = Session["username"].ToString();
-                string userAccess = Session["Access"].ToString();
+                string userAccess = Session["role"].ToString();
 
                 if (userAccess == "Super Admin")
                 {

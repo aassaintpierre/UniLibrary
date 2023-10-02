@@ -25,10 +25,12 @@ namespace WebApplication_LibraryManagementProject.UI
             if (super != null)
             {
                 //Super admin
-                Session["username"] = v.Username;
-                Session["fullname"] = v.FullName;
+                Session["username"] = super.Username;
+                Session["fullname"] = super.FullName;
                 Session["status"] = "";
                 Session["role"] = "Super Admin";
+                Response.Redirect("UserProfile.aspx");
+
             }
             else if (v != null)
             {
@@ -37,7 +39,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 Session["fullname"] = v.FullName;
                 Session["status"] = "";
                 Session["role"] = v.Access;
-                Response.Redirect("AdminBookInventory.aspx");
+                Response.Redirect("UserProfile.aspx");
             }
             else
             {
