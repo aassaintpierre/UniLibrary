@@ -20,7 +20,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                <img width="80px" src="../Images/generaluser.png" />
+                                <img width="80px" src="../Images/people.png" />
                             </div>
                         </div>
                         <div class="row">

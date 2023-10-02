@@ -14,7 +14,6 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 if (Session["role"].Equals(""))
                 {
-                    AboutLink.Visible = true;
                     ViewBooksLink.Visible = false;
                     LogoutLink.Visible = false;
                     HelloUserNavLinkButton.Visible = false;
@@ -22,8 +21,7 @@ namespace WebApplication_LibraryManagementProject.UI
                     MemberManagementLink.Visible = false;
                 }
                 else if (Session["role"].Equals("User"))
-                {
-                    AboutLink.Visible = false;
+                {;
                     ViewBooksLink.Visible = true;
                     LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, " + Session["fullname"];
@@ -32,7 +30,6 @@ namespace WebApplication_LibraryManagementProject.UI
                 }
                 else if (Session["role"].Equals("Admin"))
                 {
-                    AboutLink.Visible = false;
                     ViewBooksLink.Visible = true;
                     LogoutLink.Visible = true;
                     HelloUserNavLinkButton.Text = "Hello, Admin";

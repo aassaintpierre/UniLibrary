@@ -64,6 +64,7 @@ namespace WebApplication_LibraryManagementProject.UI
             AuthorName.Text = "";
             LanguageDropDownList.SelectedIndex = 0;
             ActualStockTextBox.Text = "";
+            CurrentStockTextBox.Text = "";
         }
         protected void AddBookButton_Click(object sender, EventArgs e)
         {

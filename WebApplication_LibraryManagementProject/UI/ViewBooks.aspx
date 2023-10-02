@@ -17,6 +17,8 @@
 
                 <div class="row">
                     <div class="col text-center">
+                        <img width="100px" src="../Images/digital-inventory.png" />
+                        <br />
                         <h3>Book List</h3>
                     </div>
                 </div>

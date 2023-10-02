@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication_LibraryManagementProject.UI.Site" %>
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication_LibraryManagementProject.UI.Site" %>
 
 <!DOCTYPE html>
 
@@ -41,10 +41,6 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
                         <asp:LinkButton class="nav-link" ID="HelloUserNavLinkButton" runat="server" OnClick="HelloUserNavLinkButton_Click">Hello user</asp:LinkButton>
-                    </li>
-
-                    <li class="nav-item">
-                        <asp:LinkButton class="nav-link" ID="AboutLink" runat="server" OnClick="AboutLinkButton_Click">About</asp:LinkButton>
                     </li>
 
                     <li class="nav-item">

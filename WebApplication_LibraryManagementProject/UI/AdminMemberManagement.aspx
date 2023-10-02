@@ -20,7 +20,7 @@
 
                         <div class="row">
                             <div class="col text-center">
-                                <img width="100px" src="../Images/generaluser.png" />
+                                <img width="100px" src="../Images/writer.png" />
                             </div>
                         </div>
 

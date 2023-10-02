@@ -36,7 +36,7 @@
                         <div class="row">
 
                             <div class="col text-center">
-                                <img id="imgview" width="100px" src="../Images/Books/writer.png" />
+                                <img id="imgview" width="100px" src="../Images/book-online.png" />
 
                                 <br />
 
