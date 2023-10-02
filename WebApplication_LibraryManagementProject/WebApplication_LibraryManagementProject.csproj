@@ -1761,8 +1761,8 @@
       <DependentUpon>202309050251119_secondMigration2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AdminLogin.cs" />
-    <Compile Include="Models\BookIssue.cs" />
+    <Compile Include="Models\SuperAdmin.cs" />
+    <Compile Include="Models\BookHistory.cs" />
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\UNILibraryDbContext.cs" />
     <Compile Include="Models\Member.cs" />

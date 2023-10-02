@@ -42,7 +42,7 @@ namespace WebApplication_LibraryManagementProject.UI
         }
         private bool CheckIfIssueEntryExists(string mId, string bId)
         {
-            var v = db.BookIssues.Where(b => b.MemberId == mId && b.BookId == bId).FirstOrDefault();
+            var v = db.BookHistories.Where(b => b.MemberId == mId && b.BookId == bId).FirstOrDefault();
             return v != null;
         }
         private void Clear()
@@ -66,7 +66,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 if(member != null && book != null)
                 {
                     MemberNameTextBox.Text = member.FullName;
-                    BookNameTextBox.Text = book.Name;
+                    BookNameTextBox.Text = book.Title;
                     ErrorLabel.Text = "Go Bouton clicked";
                 }
                 else
@@ -85,7 +85,7 @@ namespace WebApplication_LibraryManagementProject.UI
             
             try
             {
-                BookIssue bookIssue = new BookIssue();
+                BookHistory bookIssue = new BookHistory();
                 bookIssue.MemberId = UsernameTextBox.Text.Trim();
                 bookIssue.BookId = BookIdTextBox.Text.Trim();
                 bookIssue.IssueDate = StartDateTextBox.Text.Trim();
@@ -106,7 +106,7 @@ namespace WebApplication_LibraryManagementProject.UI
                             if (book.CurrentStock > 0)
                             {
                                 book.CurrentStock--;
-                                db.BookIssues.Add(bookIssue);
+                                db.BookHistories.Add(bookIssue);
                                 db.SaveChanges();
                                 /*GridViewDataBind();*/
                                 Clear(); 
@@ -143,11 +143,11 @@ namespace WebApplication_LibraryManagementProject.UI
 
                 if (CheckIfBookExists(bId) && CheckIfMemberExists(mId))
                 {
-                    var v = db.BookIssues.Where(b => b.MemberId == mId && b.BookId == bId).FirstOrDefault();
+                    var v = db.BookHistories.Where(b => b.MemberId == mId && b.BookId == bId).FirstOrDefault();
                     if (v != null)
                     {
                         v.Book.CurrentStock++;
-                        db.BookIssues.Remove(v);
+                        db.BookHistories.Remove(v);
                         db.SaveChanges();
                         /*GridViewDataBind();*/
                         Clear();

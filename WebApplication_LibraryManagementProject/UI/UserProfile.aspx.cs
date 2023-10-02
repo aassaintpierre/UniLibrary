@@ -24,32 +24,53 @@ namespace WebApplication_LibraryManagementProject.UI
             try
             {
                 string userId = Session["username"].ToString();
-                var v = db.Members.Where(m => m.Username == userId).FirstOrDefault();
-                if (v != null)
+                string userAccess = Session["Access"].ToString();
+
+                if (userAccess == "Super Admin")
                 {
-                    AccountStatusLabel.Text = v.AccountStatus;
-                    if (v.AccountStatus.Equals("Active"))
+                    var v = db.SuperAdmins.Where(m => m.Username == userId).FirstOrDefault();
+                    if (v != null)
                     {
+                        AccountStatusLabel.Text = "S_Admin";
                         AccountStatusLabel.CssClass = "badge badge-pill badge-success";
+                        
+                        FullNameTextBox.Text = v.FullName;
+                        UserNameTextBox.Text = v.Username;
+                        EmailIdTextBox.Text = "";
+                        NewPasswordTextBox.Text = "";
                     }
-                    else if (v.AccountStatus.Equals("Pending"))
+                }
+                else if (userAccess == "User" || userAccess == "Admin")
+                {
+                    var v = db.Members.Where(m => m.Username == userId).FirstOrDefault();
+                    if (v != null)
                     {
-                        AccountStatusLabel.CssClass = "badge badge-pill badge-warning";
+                        AccountStatusLabel.Text = v.AccountStatus;
+                        if (v.AccountStatus.Equals("Active"))
+                        {
+                            AccountStatusLabel.CssClass = "badge badge-pill badge-success";
+                        }
+                        else if (v.AccountStatus.Equals("Pending"))
+                        {
+                            AccountStatusLabel.CssClass = "badge badge-pill badge-warning";
+                        }
+                        else
+                        {
+                            AccountStatusLabel.CssClass = "badge badge-pill badge-danger";
+                        }
+                        FullNameTextBox.Text = v.FullName;
+                        EmailIdTextBox.Text = v.Email;
+                        UserNameTextBox.Text = v.Username;
+                        NewPasswordTextBox.Text = "";
                     }
-                    else
-                    {
-                        AccountStatusLabel.CssClass = "badge badge-pill badge-danger";
-                    }
-                    FullNameTextBox.Text = v.FullName;
-                    EmailIdTextBox.Text = v.Email;
-                    UserNameTextBox.Text = v.Username;
-                    NewPasswordTextBox.Text = "";
                 }
                 else
                 {
                     Response.Write("<script>alert('Invalid Request! Please login again.')</script>");
                 }
+
             }
+            
             catch (Exception ex)
             {
                 Response.Write("<script>alert('" + ex + "')</script>");

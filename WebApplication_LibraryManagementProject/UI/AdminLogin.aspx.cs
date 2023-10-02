@@ -21,13 +21,22 @@ namespace WebApplication_LibraryManagementProject.UI
             string username = AdminIdTextBox.Text.Trim();
             string password = PasswordTextBox.Text.Trim();
             var v = db.Members.Where(m => m.Username == username && m.Password == password && m.Access == "Admin").FirstOrDefault();
-            if (v != null)
+            var super = db.SuperAdmins.Where(m => m.Username == username && m.Password == password).FirstOrDefault();
+            if (super != null)
+            {
+                //Super admin
+                Session["username"] = v.Username;
+                Session["fullname"] = v.FullName;
+                Session["status"] = "";
+                Session["role"] = "Super Admin";
+            }
+            else if (v != null)
             {
                 //Allow access
                 Session["username"] = v.Username;
                 Session["fullname"] = v.FullName;
                 Session["status"] = "";
-                Session["role"] = "Admin";
+                Session["role"] = v.Access;
                 Response.Redirect("AdminBookInventory.aspx");
             }
             else

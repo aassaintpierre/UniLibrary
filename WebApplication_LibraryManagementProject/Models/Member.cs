@@ -4,8 +4,8 @@ namespace WebApplication_LibraryManagementProject.Models
 {
     public class Member
     {
-        [Required]
         [Key]
+        [Required]
         public string Username { get; set; }
 
         [Required]
@@ -13,6 +13,7 @@ namespace WebApplication_LibraryManagementProject.Models
 
         [Required]
         public string AccountStatus { get; set; }
+
         [Required]
         public string Access { get; set; }
 

@@ -6,12 +6,14 @@ using System.Web;
 
 namespace WebApplication_LibraryManagementProject.Models
 {
-    public class AdminLogin
+    public class SuperAdmin
     {
         [Key]
+        [Required]
         public string Username { get; set; }
         [Required]
         public string Password { get; set; }
+        [Required]
         public string FullName { get; set; }
     }
 }

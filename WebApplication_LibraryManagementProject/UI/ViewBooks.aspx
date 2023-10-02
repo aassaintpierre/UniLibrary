@@ -37,7 +37,7 @@
 
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>' Font-Bold="True" Font-Size="Larger"></asp:Label>
+                                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("Title") %>' Font-Bold="True" Font-Size="Larger"></asp:Label>
                                                         </div>
                                                     </div>
 
@@ -45,7 +45,7 @@
                                                         <div class="col-12">
                                                             
                                                             <span>Author - </span>
-                                                            <asp:Label ID="AuthorGridLabel" runat="server" Font-Bold="True" Text='<%# Eval("AuthorId") %>'></asp:Label>
+                                                            <asp:Label ID="AuthorGridLabel" runat="server" Font-Bold="True" Text='<%# Eval("Author") %>'></asp:Label>
                                                             &nbsp;| <span><span>&nbsp;</span>Genre - </span>
                                                             
 

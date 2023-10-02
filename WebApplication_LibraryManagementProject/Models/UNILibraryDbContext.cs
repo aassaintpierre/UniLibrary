@@ -10,7 +10,7 @@ namespace WebApplication_LibraryManagementProject.Models
     {
         public DbSet<Member> Members { get; set; }
         public DbSet<Book> Books { get; set; }
-        public DbSet<BookIssue> BookIssues { get; set; }
-        public DbSet<AdminLogin> AdminLogin { get; set; }
+        public DbSet<BookHistory> BookHistories { get; set; }
+        public DbSet<SuperAdmin> SuperAdmins { get; set; }
     }
 }

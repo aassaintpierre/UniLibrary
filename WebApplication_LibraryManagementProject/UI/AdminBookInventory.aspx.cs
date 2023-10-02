@@ -37,9 +37,9 @@ namespace WebApplication_LibraryManagementProject.UI
 
             Book book = new Book();
             book.Id = BookIdTextBox.Text.Trim();
-            book.Name = BookNameTextBox.Text.Trim();
+            book.Title = BookNameTextBox.Text.Trim();
             book.Language = LanguageDropDownList.SelectedItem.Value;
-            book.AuthorId = AuthorName.Text.Trim();
+            book.Author = AuthorName.Text.Trim();
             book.Genre = genres;
             book.ActualStock = Convert.ToInt32(ActualStockTextBox.Text.Trim());
             if (operation.Equals("update"))
@@ -54,7 +54,7 @@ namespace WebApplication_LibraryManagementProject.UI
         }
         private bool CheckIfBookExists(string id, string name)
         {
-            var v = db.Books.Where(b => b.Id == id && b.Name == name).FirstOrDefault();
+            var v = db.Books.Where(b => b.Id == id && b.Title == name).FirstOrDefault();
             return v != null;
         }
         private void Clear()
@@ -71,7 +71,7 @@ namespace WebApplication_LibraryManagementProject.UI
             Book book = GetBookInfo();
             try
             {
-                if (CheckIfBookExists(book.Id, book.Name))
+                if (CheckIfBookExists(book.Id, book.Title))
                 {
                     Response.Write("<script>alert('Book Already Exists')</script>");
                 }
@@ -94,15 +94,15 @@ namespace WebApplication_LibraryManagementProject.UI
             Book book = GetBookInfo("update");
             try
             {
-                var v = db.Books.Where(b => b.Id == book.Id && b.Name == book.Name).FirstOrDefault();
+                var v = db.Books.Where(b => b.Id == book.Id && b.Title == book.Title).FirstOrDefault();
                 if (v != null)
                 {
                     v.Genre = book.Genre;
                     v.Language = book.Language;
                     v.ActualStock = book.ActualStock;
                     v.CurrentStock = book.CurrentStock;
-                    v.BookImgLink = book.BookImgLink;
-                    v.AuthorId = book.AuthorId;
+                   /* v.BookImgLink = book.BookImgLink;*/
+                    v.Author = book.Author;
                     db.SaveChanges();
                     /*BooksGridViewDataBind();*/
                     Clear();
@@ -155,9 +155,9 @@ namespace WebApplication_LibraryManagementProject.UI
                 var v = db.Books.Where(b => b.Id == id).FirstOrDefault();
                 if (v != null)
                 {
-                    BookNameTextBox.Text = v.Name;
+                    BookNameTextBox.Text = v.Title;
                     LanguageDropDownList.SelectedValue = v.Language;
-                    AuthorName.Text = v.AuthorId;
+                    AuthorName.Text = v.Author;
                     string[] genres = v.Genre.Split(',');
                     for (int i = 0; i < genres.Length; i++)
                     {
@@ -175,7 +175,7 @@ namespace WebApplication_LibraryManagementProject.UI
                     ActualStockTextBox.Text = v.ActualStock.ToString();
                     CurrentStockTextBox.Text = v.CurrentStock.ToString();
                     IssuedBooksTextBox.Text = gIssuedBooks.ToString();
-                    gImagePath = v.BookImgLink;
+                    /*gImagePath = v.BookImgLink;*/
                 }
                 else
                 {

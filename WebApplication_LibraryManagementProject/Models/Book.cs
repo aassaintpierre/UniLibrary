@@ -9,21 +9,17 @@ namespace WebApplication_LibraryManagementProject.Models
     public class Book
     {
         [Key]
+        [Required]
         public string Id { get; set; }
-        public string IsbnCode { get; set; }
-        public string Name { get; set; }
+        [Required]
+        public string Title { get; set; }
+        [Required]
+        public string Author { get; set; }
         public string Genre { get; set; }
-        [DataType(DataType.Date)]
-       /* public DateTime PublishDate { get; set; }*/
+        [Required]
         public string Language { get; set; }
-        /*public string Edition { get; set; }
-        public double BookCost { get; set; }
-        public int NoOfPages { get; set; }
-        public string BookDescription { get; set; }*/
+        [Required]
         public int ActualStock { get; set; }
         public int CurrentStock { get; set; }
-        public string BookImgLink { get; set; }
-        public string AuthorId{ get; set; }
-        /*public string PublisherId { get; set; }*/
     }
 }
