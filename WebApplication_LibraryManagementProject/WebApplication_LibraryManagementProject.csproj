@@ -1748,17 +1748,9 @@
     <Content Include="UI\Site.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202308132322471_initialMigration1.cs" />
-    <Compile Include="Migrations\202308132322471_initialMigration1.designer.cs">
-      <DependentUpon>202308132322471_initialMigration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309050203545_secondMigration.cs" />
-    <Compile Include="Migrations\202309050203545_secondMigration.designer.cs">
-      <DependentUpon>202309050203545_secondMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202309050251119_secondMigration2.cs" />
-    <Compile Include="Migrations\202309050251119_secondMigration2.designer.cs">
-      <DependentUpon>202309050251119_secondMigration2.cs</DependentUpon>
+    <Compile Include="Migrations\202310020213033_initialmigration.cs" />
+    <Compile Include="Migrations\202310020213033_initialmigration.designer.cs">
+      <DependentUpon>202310020213033_initialmigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SuperAdmin.cs" />
@@ -1912,14 +1904,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202308132322471_initialMigration1.resx">
-      <DependentUpon>202308132322471_initialMigration1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309050203545_secondMigration.resx">
-      <DependentUpon>202309050203545_secondMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202309050251119_secondMigration2.resx">
-      <DependentUpon>202309050251119_secondMigration2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202310020213033_initialmigration.resx">
+      <DependentUpon>202310020213033_initialmigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
