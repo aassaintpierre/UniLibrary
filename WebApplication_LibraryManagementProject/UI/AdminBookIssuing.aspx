@@ -9,7 +9,7 @@
                 yearRange: "2000:2025",
                 dateFormat: 'dd-mm-yy'
             });
-            $("#body_EndDateTextBox").datepicker({
+            $("#body_ReturnDateTextBox").datepicker({
                 changeMonth: true,
                 changeYear: true,
                 yearRange: "2000:2025",
@@ -84,7 +84,7 @@
                                 <div class="form-group">
                                     <label for="body_EndDateTextBox">Return Date</label>
                                     <div class="input-group">
-                                        <asp:TextBox class="form-control" placeholder="End Date" ID="EndDateTextBox" runat="server"></asp:TextBox>
+                                        <asp:TextBox class="form-control" placeholder="Return Date" ID="ReturnDateTextBox" runat="server"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>

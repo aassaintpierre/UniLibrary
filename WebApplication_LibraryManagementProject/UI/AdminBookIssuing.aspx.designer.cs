@@ -69,13 +69,13 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.TextBox StartDateTextBox;
 
         /// <summary>
-        /// EndDateTextBox control.
+        /// ReturnDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EndDateTextBox;
+        protected global::System.Web.UI.WebControls.TextBox ReturnDateTextBox;
 
         /// <summary>
         /// IssueButton control.

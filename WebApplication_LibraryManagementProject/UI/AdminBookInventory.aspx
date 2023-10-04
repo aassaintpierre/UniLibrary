@@ -192,10 +192,10 @@
                                         <asp:BoundField DataField="MemberId" HeaderText="Member ID" ReadOnly="True" SortExpression="MemberId" />
                                         <asp:BoundField DataField="BookId" HeaderText="Book ID" ReadOnly="True" SortExpression="BookId" />
                                         <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" ReadOnly="True" SortExpression="IssueDate" />
+                                        <asp:BoundField DataField="ReturnDate" HeaderText="Return Date" ReadOnly="True" SortExpression="ReturnDate" />
                                     </Columns>
 
                                 </asp:GridView>
-                                        <!--<asp:BoundField DataField="DueDate" HeaderText="Return Date" ReadOnly="True" SortExpression="DueDate" />-->
                             </div>
                         </div>
 

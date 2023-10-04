@@ -40,7 +40,7 @@ namespace WebApplication_LibraryManagementProject.UI
             MemberNameTextBox.Text = "";
             BookNameTextBox.Text = "";
             StartDateTextBox.Text = "";
-            EndDateTextBox.Text = "";
+            ReturnDateTextBox.Text = "";
             ErrorLabel.Text = "";
         }
 
@@ -134,8 +134,8 @@ namespace WebApplication_LibraryManagementProject.UI
                     if (v != null)
                     {
                         v.Book.CurrentStock++;
-                        
-                        db.BookHistories.Remove(v);
+                        v.ReturnDate = ReturnDateTextBox.Text.Trim();
+                        /*db.BookHistories.Remove(v);*/
                         db.SaveChanges();
                         Clear();
                     }
