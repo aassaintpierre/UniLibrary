@@ -81,40 +81,45 @@
                         <br />
 
                         <div class="col">
-                            <asp:Button CssClass="btn btn-block btn-danger" ID="DeleteUserButton" runat="server" Text="Delete User Permanently" />
+                            <!--<asp:Button CssClass="btn btn-block btn-danger" ID="DeleteUserButton" runat="server" Text="Delete User Permanently" />-->
                             <asp:LinkButton CssClass="btn btn-block btn-success" ID="AddUserButton" runat="server" OnClick="AddUserButton_Click">Add User</asp:LinkButton>
                         </div>
 
                     </div>
             </div>
 
-            <!--
-            <div class="col-md-6">
-                <div class="card">
+        </div>
+
+            <div class="col-md-9 mx-auto">
+                <div class="card" style="margin: 10px">
                     <div class="card-body">
+
                         <div class="row">
                             <div class="col text-center">
                                 <h3>Member List</h3>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
                                 <asp:SqlDataSource ID="MemberSqlDataSource" runat="server" ConnectionString="Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;" SelectCommand="SELECT [FullName], [Username], [Email], [AccountStatus], [Access] FROM [Members]"></asp:SqlDataSource>
-                                <asp:GridView ID="MemberGridView" CssClass="table table-striped table-bordered table-responsive" runat="server" AutoGenerateColumns="False" DataKeyNames="Username" DataSourceID="MemberSqlDataSource" OnRowDataBound="MemberGridView_RowDataBound">
+                                <asp:GridView ID="MemberGridView" CssClass="table table-secondary table-borderless table-hover table-responsive" runat="server" AutoGenerateColumns="False" DataKeyNames="FullName" DataSourceID="MemberSqlDataSource" >
+                                    
                                     <Columns>
                                         <asp:BoundField DataField="FullName" HeaderText="Full name" SortExpression="FullName" />
                                         <asp:BoundField DataField="Username" HeaderText="Username" ReadOnly="True" SortExpression="Username" />
                                         <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
-                                        <asp:BoundField DataField="AccountStatus" HeaderText="Account status" SortExpression="AccountStatus" />
+                                        <asp:BoundField DataField="AccountStatus" HeaderText="Status" SortExpression="AccountStatus" />
                                         <asp:BoundField DataField="Access" HeaderText="Account access" SortExpression="Access" />
                                     </Columns>
+
                                 </asp:GridView>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-            -->
-        </div>
+            
     </div>
 </asp:Content>

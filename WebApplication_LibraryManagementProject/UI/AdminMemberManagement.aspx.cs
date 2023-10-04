@@ -90,11 +90,11 @@ namespace WebApplication_LibraryManagementProject.UI
             {
                 if (e.Row.RowType == DataControlRowType.DataRow)
                 {
-                    if (e.Row.Cells[2].Text.Equals("active"))
+                    if (e.Row.Cells[4].Text.Equals("Active"))
                     {
                         e.Row.BackColor = System.Drawing.Color.LightGreen;
                     }
-                    else if (e.Row.Cells[2].Text.Equals("pending"))
+                    else if (e.Row.Cells[4].Text.Equals("Pending"))
                     {
                         e.Row.BackColor = System.Drawing.Color.LightGoldenrodYellow;
                     }
