@@ -74,27 +74,27 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="body_StartDateTextBox">Start Date</label>
                                     <asp:TextBox class="form-control" placeholder="Start Date" ID="StartDateTextBox" runat="server"></asp:TextBox>
                                 </div>
                             </div>
-                            <!--<div class="col-md-6">
+                            <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="body_EndDateTextBox">End Date</label>
+                                    <label for="body_EndDateTextBox">Return Date</label>
                                     <div class="input-group">
                                         <asp:TextBox class="form-control" placeholder="End Date" ID="EndDateTextBox" runat="server"></asp:TextBox>
                                     </div>
-                                </div>-->
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <asp:Button CssClass="btn btn-block btn-primary" ID="IssueButton" runat="server" Text="Assign" OnClick="IssueButton_Click" />
+                                <asp:Button CssClass="btn btn-block btn-primary" ID="IssueButton" runat="server" Text="Assign book" OnClick="IssueButton_Click" />
                             </div>
                             <div class="col-md-6">
-                                <asp:Button CssClass="btn btn-block btn-success" ID="ReturnButton" runat="server" Text="Return" OnClick="ReturnButton_Click" />
+                                <asp:Button CssClass="btn btn-block btn-success" ID="ReturnButton" runat="server" Text="Return book" OnClick="ReturnButton_Click" />
                             </div>
                             <div class="col text-center">
                                 <asp:Label ID="ErrorLabel" runat="server" Text="" CssClass="text-danger"></asp:Label>

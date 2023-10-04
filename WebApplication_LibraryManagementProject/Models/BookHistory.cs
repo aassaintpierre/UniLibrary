@@ -20,7 +20,8 @@ namespace WebApplication_LibraryManagementProject.Models
         [Required]
         public string IssueDate { get; set; }
 
-        /*public string DueDate { get; set; }*/
+        public string ReturnDate { get; set; }
+
         public virtual Book Book { get; set; }
     }
 }

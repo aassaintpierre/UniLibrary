@@ -323,3 +323,4 @@ C:\Users\Other\Documents\unilibrary\WebApplication_LibraryManagementProject\obj\
 C:\Users\Other\Documents\unilibrary\WebApplication_LibraryManagementProject\obj\Debug\WebApplication_LibraryManagementProject.pdb
 C:\Users\Other\Documents\unilibrary\WebApplication_LibraryManagementProject\obj\Debug\WebApplication_LibraryManagementProject.Migrations.initialmigration.resources
 C:\Users\Other\Documents\unilibrary\WebApplication_LibraryManagementProject\obj\Debug\WebApplication_LibraryManagementProject.csproj.GenerateResource.cache
+C:\Users\Other\Documents\unilibrary\WebApplication_LibraryManagementProject\obj\Debug\WebApplication_LibraryManagementProject.Migrations.migration2.resources

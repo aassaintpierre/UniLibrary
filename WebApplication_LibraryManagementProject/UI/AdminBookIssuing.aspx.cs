@@ -124,6 +124,7 @@ namespace WebApplication_LibraryManagementProject.UI
             
             try
             {
+                string userId = Session["username"].ToString();
                 string mId = UsernameTextBox.Text.Trim();
                 string bId = BookIdTextBox.Text.Trim();
 
@@ -133,6 +134,7 @@ namespace WebApplication_LibraryManagementProject.UI
                     if (v != null)
                     {
                         v.Book.CurrentStock++;
+                        
                         db.BookHistories.Remove(v);
                         db.SaveChanges();
                         Clear();

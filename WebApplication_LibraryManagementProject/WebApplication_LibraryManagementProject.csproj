@@ -1752,6 +1752,10 @@
     <Compile Include="Migrations\202310020213033_initialmigration.designer.cs">
       <DependentUpon>202310020213033_initialmigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310040131593_migration2.cs" />
+    <Compile Include="Migrations\202310040131593_migration2.designer.cs">
+      <DependentUpon>202310040131593_migration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\SuperAdmin.cs" />
     <Compile Include="Models\BookHistory.cs" />
@@ -1906,6 +1910,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202310020213033_initialmigration.resx">
       <DependentUpon>202310020213033_initialmigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310040131593_migration2.resx">
+      <DependentUpon>202310040131593_migration2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

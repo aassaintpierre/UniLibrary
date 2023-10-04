@@ -31,7 +31,7 @@ namespace WebApplication_LibraryManagementProject.UI
                     var v = db.SuperAdmins.Where(m => m.Username == userId).FirstOrDefault();
                     if (v != null)
                     {
-                        AccountStatusLabel.Text = "S_Admin";
+                        AccountStatusLabel.Text = "Super Admin";
                         AccountStatusLabel.CssClass = "badge badge-pill badge-success";
                         
                         FullNameTextBox.Text = v.FullName;
