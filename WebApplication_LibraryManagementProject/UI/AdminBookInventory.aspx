@@ -144,21 +144,23 @@
 
                         
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-6">
                                 <asp:Button CssClass="btn btn-block btn-success" ID="AddBookButton" runat="server" Text="Add" OnClick="AddBookButton_Click" />
                             </div>
-                            <div class="col-4">
+                            <div class="col-6">
                                 <asp:Button CssClass="btn btn-block btn-primary" ID="UpdateBookButton" runat="server" Text="Update" OnClick="UpdateBookButton_Click" />
                             </div>
-                            <div class="col-4">
-                                <asp:Button CssClass="btn btn-block btn-danger" ID="DeleteBookButton" runat="server" Text="Delete" OnClick="DeleteBookButton_Click" />
-                            </div>
+                            
                         </div>
                         
                         <br />
 
                         <div class="col-12">
                             <asp:LinkButton CssClass="btn btn-block btn-success" ID="AssignBookButton" runat="server" OnClick="AssignBookButton_Click">Assign Book</asp:LinkButton>
+                        </div>
+                        <br />
+                        <div class="col-12">
+                                <asp:Button CssClass="btn btn-block btn-danger" ID="DeleteBookButton" runat="server" Text="Remove Book" OnClick="DeleteBookButton_Click" />
                         </div>
                     </div>
                 </div>

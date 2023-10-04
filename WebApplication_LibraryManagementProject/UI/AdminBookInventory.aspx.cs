@@ -17,6 +17,22 @@ namespace WebApplication_LibraryManagementProject.UI
         private static int gActualStock, gCurrentStock, gIssuedBooks;
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                //Only Super admin can remove book from database
+                if (Session["role"].Equals("Super Admin"))
+                {
+                    DeleteBookButton.Visible = true;
+                }
+                else
+                {
+                    DeleteBookButton.Visible = false;
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
             BooksGridViewDataBind();
         }
         private void BooksGridViewDataBind()
