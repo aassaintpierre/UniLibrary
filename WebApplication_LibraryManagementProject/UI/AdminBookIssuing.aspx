@@ -107,39 +107,6 @@
                 
             </div>
 
-            <!--<div class="col-md-5">
-                <div class="card" style="margin: 10px">
-                    <div class="card-body">
-                        <div class="row">
-
-                            <div class="col text-center">
-                                <h3>Add Books</h3>
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="row">
-                            <div class="col">
-                                <asp:GridView ID="IssuedBookGridView" CssClass="table table-striped table-bordered" runat="server" OnRowDataBound="IssuedBookGridView_RowDataBound" AutoGenerateColumns="False">
-                                    <Columns>
-                                        <asp:BoundField DataField="MemberId" HeaderText="Member ID" ReadOnly="True" SortExpression="MemberId" />
-                                        <asp:BoundField DataField="Member.FullName" HeaderText="Member Name" ReadOnly="True" SortExpression="Member.FullName" />
-                                        <asp:BoundField DataField="BookId" HeaderText="Book ID" ReadOnly="True" SortExpression="BookId" />
-                                        <asp:BoundField DataField="Book.Name" HeaderText="Book Name" ReadOnly="True" SortExpression="Book.Name" />
-                                        <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" ReadOnly="True" SortExpression="IssueDate" />
-                                        <asp:BoundField DataField="DueDate" HeaderText="Return Date" ReadOnly="True" SortExpression="DueDate" />
-                                    </Columns>
-                                </asp:GridView>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>-->
-
-        </div>
     </div>
 
 </asp:Content>

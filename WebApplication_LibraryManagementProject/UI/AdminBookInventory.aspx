@@ -166,6 +166,40 @@
                 <br />
             </div>
 
+
         </div>
+
+            <div class="col-md-5 mx-auto">
+                <div class="card" style="margin: 10px">
+                    <div class="card-body">
+                        <div class="row">
+
+                            <div class="col text-center">
+                                <h3>Books history</h3>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="col">
+                                <asp:GridView ID="IssuedBookGridView" CssClass="table table-secondary table-hover table-bordered" runat="server" AutoGenerateColumns="False">
+                                    
+                                    <Columns>
+                                        <asp:BoundField DataField="MemberId" HeaderText="Member ID" ReadOnly="True" SortExpression="MemberId" />
+                                        <asp:BoundField DataField="BookId" HeaderText="Book ID" ReadOnly="True" SortExpression="BookId" />
+                                        <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" ReadOnly="True" SortExpression="IssueDate" />
+                                    </Columns>
+
+                                </asp:GridView>
+                                        <!--<asp:BoundField DataField="DueDate" HeaderText="Return Date" ReadOnly="True" SortExpression="DueDate" />-->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
     </div>
 </asp:Content>

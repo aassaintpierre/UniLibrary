@@ -17,12 +17,19 @@ namespace WebApplication_LibraryManagementProject.UI
         private static int gActualStock, gCurrentStock, gIssuedBooks;
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*BooksGridViewDataBind();*/
+            BooksGridViewDataBind();
         }
         private void BooksGridViewDataBind()
         {
-            /*BooksGridView.DataSource = db.Books.ToList();
-            BooksGridView.DataBind();*/
+            try
+            {
+                IssuedBookGridView.DataSource = db.BookHistories.ToList();
+                IssuedBookGridView.DataBind();
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex + "')</script>");
+            }
         }
 
         private Book GetBookInfo(string operation = "add")
@@ -79,7 +86,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     db.Books.Add(book);
                     db.SaveChanges();
-                    /*BooksGridViewDataBind();*/
+                    BooksGridViewDataBind();
                     Clear();
                 }
             }
@@ -101,10 +108,9 @@ namespace WebApplication_LibraryManagementProject.UI
                     v.Language = book.Language;
                     v.ActualStock = book.ActualStock;
                     v.CurrentStock = book.CurrentStock;
-                   /* v.BookImgLink = book.BookImgLink;*/
                     v.Author = book.Author;
                     db.SaveChanges();
-                    /*BooksGridViewDataBind();*/
+                    BooksGridViewDataBind();
                     Clear();
                 }
                 else
@@ -128,7 +134,7 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     db.Books.Remove(v);
                     db.SaveChanges();
-                    /*BooksGridViewDataBind();*/
+                    BooksGridViewDataBind();
                     Clear();
                 }
                 else
@@ -175,7 +181,6 @@ namespace WebApplication_LibraryManagementProject.UI
                     ActualStockTextBox.Text = v.ActualStock.ToString();
                     CurrentStockTextBox.Text = v.CurrentStock.ToString();
                     IssuedBooksTextBox.Text = gIssuedBooks.ToString();
-                    /*gImagePath = v.BookImgLink;*/
                 }
                 else
                 {

@@ -11,20 +11,8 @@ namespace WebApplication_LibraryManagementProject.UI
         private UNILibraryDbContext db = new UNILibraryDbContext();
         protected void Page_Load(object sender, EventArgs e)
         {
-            /*GridViewDataBind();*/
+
         }
-        /*private void GridViewDataBind()
-        {
-            try
-            {
-                IssuedBookGridView.DataSource = db.BookIssues.ToList();
-                IssuedBookGridView.DataBind();
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>alert('" + ex + "')</script>");
-            }
-        }*/
         private bool CheckIfBookExists(string id)
         {
             var v = db.Books.Where(b => b.Id == id).FirstOrDefault();
@@ -67,7 +55,6 @@ namespace WebApplication_LibraryManagementProject.UI
                 {
                     MemberNameTextBox.Text = member.FullName;
                     BookNameTextBox.Text = book.Title;
-                    ErrorLabel.Text = "Go Bouton clicked";
                 }
                 else
                 {
@@ -108,7 +95,6 @@ namespace WebApplication_LibraryManagementProject.UI
                                 book.CurrentStock--;
                                 db.BookHistories.Add(bookIssue);
                                 db.SaveChanges();
-                                /*GridViewDataBind();*/
                                 Clear(); 
                             }
                             else
@@ -149,7 +135,6 @@ namespace WebApplication_LibraryManagementProject.UI
                         v.Book.CurrentStock++;
                         db.BookHistories.Remove(v);
                         db.SaveChanges();
-                        /*GridViewDataBind();*/
                         Clear();
                     }
                     else
