@@ -17,11 +17,6 @@ namespace WebApplication_LibraryManagementProject.UI
                     AdminAccess.Text = "Admin";
                     AdminAccess.Value = "Admin";
                 }
-                else
-                {
-                    AdminAccess.Text = "";
-
-                }
             }
             catch (Exception ex)
             {
