@@ -51,6 +51,15 @@ namespace WebApplication_LibraryManagementProject.UI
         protected global::System.Web.UI.WebControls.DropDownList User_access;
 
         /// <summary>
+        /// AdminAccess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListItem AdminAccess;
+
+        /// <summary>
         /// UsernameTextBox control.
         /// </summary>
         /// <remarks>

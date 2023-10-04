@@ -156,7 +156,7 @@
                         <br />
 
                         <div class="col-12">
-                            <asp:LinkButton CssClass="btn btn-block btn-success" ID="AssignBookButton" runat="server" OnClick="AssignBookButton_Click">Assign Book</asp:LinkButton>
+                            <asp:LinkButton CssClass="btn btn-block btn-success" ID="AssignBookButton" runat="server" OnClick="AssignBookButton_Click">Book Entry</asp:LinkButton>
                         </div>
                         <br />
                         <div class="col-12">

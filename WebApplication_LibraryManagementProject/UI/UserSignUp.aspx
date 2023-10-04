@@ -85,9 +85,8 @@
 
                                         <asp:ListItem Selected="True">--SELECT--</asp:ListItem>
 
-                                        <asp:ListItem Value="Admin">Admin</asp:ListItem>
-
                                         <asp:ListItem Value="User">User</asp:ListItem>
+                                        <asp:ListItem ID="AdminAccess"></asp:ListItem>
 
                                     </asp:DropDownList>
                                 </div>

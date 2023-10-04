@@ -9,7 +9,24 @@ namespace WebApplication_LibraryManagementProject.UI
         private UNILibraryDbContext db = new UNILibraryDbContext();
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                //Only Super admin can remove book from database
+                if (Session["role"].Equals("Super Admin"))
+                {
+                    AdminAccess.Text = "Admin";
+                    AdminAccess.Value = "Admin";
+                }
+                else
+                {
+                    AdminAccess.Text = "";
 
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         protected void SignUpButton_Click(object sender, EventArgs e)
