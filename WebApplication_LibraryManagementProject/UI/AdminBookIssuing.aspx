@@ -32,7 +32,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
-                                <h3>Book Issuing</h3>
+                                <h3>Book Lending</h3>
                             </div>
                         </div>
                         <div class="row">
