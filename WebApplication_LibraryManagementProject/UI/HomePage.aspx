@@ -9,8 +9,8 @@
     <section>
         <div class="card">
             <div class="header">
-                <img src="../Images/LMS2.png" alt="Logo" />
-                <label class="logo-label">UniLibrary Management System</label>
+                <img src="../Images/LMS2.png" style="height: 250px; width:auto" />
+                <label class="logo-label">Library Management System</label>
             </div>
 
 
