@@ -24,7 +24,7 @@ The following functionalities are completed:
 
 Here's a demo of implemented user stories:
 
-</>
+<img src="demo.gif" />
 
 ## Open-source libraries used
 
