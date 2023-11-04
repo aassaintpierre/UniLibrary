@@ -28,8 +28,8 @@ Here's a demo of implemented user stories:
 
 ## Open-source libraries used
 
-- [SSMS]([https://react.dev/](https://learn.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16))
-- [Bootstrap]([https://www.npmjs.com/](https://getbootstrap.com/))
+- [SSMS](https://learn.microsoft.com/fr-fr/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
+- [Bootstrap](https://getbootstrap.com/)
 - [ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet)
 
 ## How to test
